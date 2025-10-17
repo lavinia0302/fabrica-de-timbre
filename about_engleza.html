@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stamp Factory — Custom stamps for brands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description"
+        content="We print custom stamps with premium finishes: hot foil, embossing, holograms. Fast production, guaranteed quality. Request a quote now!" />
+    <meta name="keywords"
+        content="custom stamps, stamp printing house, hot foil, embossing, holograms, stamp factory" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/Untitled image(56).png" />
+    <link rel="shortcut icon" type="image/png" href="img/Untitled image(56).png" />
+    <link rel="apple-touch-icon" href="img/Untitled image(56).png" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Special font for hero title -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Small override: font only for hero title -->
+    <style>
+        .hero-title {
+            font-family: 'Playfair Display', serif !important;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: .5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height:45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Str. Fabrica de Chibrituri
+                        28, Bucharest 050183</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+40 21 335 5350</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>ft@posta-romana.ro</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height:45px;">
+                    <!-- Facebook -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank" rel="noopener"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f fw-normal"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram fw-normal"></i>
+                    </a>
+                    <!-- Email -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                        href="mailto:ft@posta-romana.ro" aria-label="Send email">
+                        <i class="fa fa-envelope-open fw-normal"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index_engleza.html" class="navbar-brand p-0">
+                <img src="img/header-site-Posta-Tipografie.png" alt="Stamp Factory" class="brand-logo" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index_engleza.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_engleza.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicii_engleza.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <!-- RO/EN intră și ele în meniu pe mobil -->
+                    <li class="nav-item ms-lg-3">
+                        <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
+                            <a class="btn btn-sm btn-light text-dark px-2" href="about.html" aria-label="Română"
+                                aria-current="true">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="about_engleza.html"
+                                aria-label="English">EN</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Header / Page title -->
+    <div class="container-fluid bg-primary bg-header-about mb-0">
+        <div class="row py-4">
+            <div class="col-12 text-center">
+                <h1 class="display-4 text-white animated zoomIn">About us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index_engleza.html" class="h5 text-white text-decoration-none">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active h5 text-white-50" aria-current="page">About us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Our history</h5>
+                        <h1 class="mb-0">Stamp Factory — since 1872, heritage printing for Romania</h1>
+                    </div>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        The history of the Stamp Factory begins on <strong>February 29, 1872</strong>, with the Stamp
+                        and
+                        Registration Law. In the same year, within the Ministry of Finance, the
+                        <em>Service for the Manufacture, Conservation and Distribution of Stamps</em> was founded — the
+                        core of the
+                        current Factory. The first equipment were four hand presses brought from Vienna, and starting in
+                        1876 we
+                        printed postage stamps based on galvanic clichés made in Paris. Since then, we have printed
+                        fiscal and
+                        postage stamps, engraved sheets, policies, money orders, postcards (domestic since 1873,
+                        international since
+                        1879) and many other items with security features.
+                    </p>
+
+                    <div class="row g-0 mb-3">
+                        <div class="col-sm-6">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Founded in 1872; uninterrupted
+                                tradition</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fiscal &amp; postage stamps,
+                                money orders, postcards</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Three printing technologies:
+                                relief, planographic, intaglio</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Anti-counterfeit: microtext,
+                                “FT” watermark, special inks, holograms</h5>
+                        </div>
+                    </div>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        From 1907 we went through successive modernization waves; in 1911 one of the most appreciated
+                        fiscal stamp
+                        issues (King Carol I) appeared, and from 1927 we introduced advanced protection techniques.
+                        Today we are a
+                        unique printing house in Romania: we operate all three printing types, we produce offset
+                        polychromy
+                        (catalogues, posters, labels, stickers, calendars, books, magazines) as well as envelope
+                        personalization,
+                        perforation and numbering. Recent upgrades (high-speed digital printing, inserting line,
+                        integrated
+                        workflows) allow us to deliver fast, safely and with full traceability. <strong>Our
+                            mission</strong> is to
+                        remain the preferred supplier of printing products and services through quality, promptness and
+                        solutions
+                        tailored to each client.
+                    </p>
+
+                    <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                            style="width:60px;height:60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2">Call us for details</h5>
+                            <h4 class="text-primary mb-0">+40 21 335 5350</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5" style="min-height:500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded"
+                            src="img/183999263_5573167752725931_541327193682137512_n.jpg" style="object-fit:cover;"
+                            decoding="async" alt="Stamp Factory — historic image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Tradition & Technology since 1872 -->
+    <section class="container py-5">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-bold text-uppercase">About us</span>
+            <h2 class="display-6 fw-bold mt-2">Tradition & technology since 1872</h2>
+            <p class="lead text-muted mb-0">Secure printing and philately — from prepress to finishing</p>
+        </div>
+
+        <!-- Capability tiles -->
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="h-100 p-4 border rounded-3">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold">Prepress</div>
+                    <h5 class="mb-2">Professional file preparation</h5>
+                    <p class="text-muted mb-0">Retouching, preflight, ICC profiling, PDF/X, proper bleed & overprint for
+                        surprise-free printing.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="h-100 p-4 border rounded-3">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold">Secure printing</div>
+                    <h5 class="mb-2">Built-in anti-counterfeit features</h5>
+                    <p class="text-muted mb-0">Microtext, UV/thermo/photochromic inks, blind emboss, unique numbering,
+                        inserting.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="h-100 p-4 border rounded-3">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold">Digital & VDP</div>
+                    <h5 class="mb-2">High-speed personalization</h5>
+                    <p class="text-muted mb-0">Unique series, bar/QR codes, addresses; small/medium runs, direct
+                        prepress integration.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="h-100 p-4 border rounded-3">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold">Finishing</div>
+                    <h5 class="mb-2">Premium look & protection</h5>
+                    <p class="text-muted mb-0">Hot foil, blind emboss, total/spot varnish, gloss/matte/soft-touch
+                        lamination.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="h-100 p-4 border rounded-3">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold">Traceability</div>
+                    <h5 class="mb-2">Full process control</h5>
+                    <p class="text-muted mb-0">Production log, QC checks, internal audit and batch & series reporting.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="h-100 p-4 border rounded-3">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold">Heritage</div>
+                    <h5 class="mb-2">1872 — present</h5>
+                    <p class="text-muted mb-0">Tradition in philatelic issues, collectibles, technical and cultural
+                        expertise.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- In numbers -->
+        <div class="row text-center g-4 mt-5">
+            <div class="col-6 col-lg-3">
+                <div class="p-4 border rounded-3 h-100">
+                    <div class="display-6 fw-bold text-primary">150+</div>
+                    <div class="text-muted">years in print</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="p-4 border rounded-3 h-100">
+                    <div class="display-6 fw-bold text-primary">1–6</div>
+                    <div class="text-muted">colors on stamps</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="p-4 border rounded-3 h-100">
+                    <div class="display-6 fw-bold text-primary">100%</div>
+                    <div class="text-muted">traceability</div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3">
+                <div class="p-4 border rounded-3 h-100">
+                    <div class="display-6 fw-bold text-primary">VDP</div>
+                    <div class="text-muted">automatic inserting</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Official statements -->
+        <div class="container-fluid py-5 wow FadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width:820px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Official statements</h5>
+                    <h1 class="mb-0">On the modernization of Romanian Post and the Stamp Factory</h1>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="testimonial-item bg-light h-100">
+                            <div class="d-flex align-items-center border-bottom pt-4 pb-3 px-4">
+                                <img class="img-fluid rounded" src="img/images.jpg" alt="Sebastian Burduja"
+                                    style="width:60px;height:60px;" />
+                                <div class="ps-3">
+                                    <h4 class="text-primary mb-1">Sebastian Burduja</h4>
+                                    <small class="text-uppercase">Minister of Energy</small>
+                                </div>
+                            </div>
+                            <div class="pt-3 pb-4 px-4" style="text-align:justify;">
+                                “Romanian Post is modernizing — an important message that shows how vital the stability
+                                of a leadership
+                                team is. We are talking about a team that has delivered, even though it is not on a full
+                                mandate. I very
+                                much want us to have stability and predictability. The difference between a politician
+                                and a leader is
+                                simple: politicians think about the next elections, leaders think about the next
+                                generations. What we
+                                see today, here, is a team and a company that thinks about the next generations, looks
+                                to and respects
+                                the past — a 160-year history — but also has a forward-looking perspective.”
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="testimonial-item bg-light h-100">
+                            <div class="d-flex align-items-center border-bottom pt-4 pb-3 px-4">
+                                <img class="img-fluid rounded"
+                                    src="img/Director-General-Valentin-Stefan-(resize-crop-foto).jpg"
+                                    alt="Valentin Ștefan" style="width:60px;height:60px;" />
+                                <div class="ps-3">
+                                    <h4 class="text-primary mb-1">Valentin Ștefan</h4>
+                                    <small class="text-uppercase">Director General, Romanian Post</small>
+                                </div>
+                            </div>
+                            <div class="pt-3 pb-4 px-4" style="text-align:justify;">
+                                “In the year when the Stamp Factory celebrates 150 years of activity and Romanian Post
+                                marks 160 years,
+                                we can see many results of the company’s transformation. The equipment brought in by
+                                Romanian Post is
+                                the key to developing the Stamp Factory in the medium and long term. It is another step
+                                toward what we
+                                aim to achieve at Romanian Post: digitalization, revitalization and performance. In
+                                simple terms, from
+                                today Romanian Post can participate in major tenders and contracts without having to
+                                become a
+                                subcontractor or partner, being able to take on integrated jobs of printing, inserting
+                                and dispatch.”
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YouTube – thumbnail + load on click -->
+        <div class="yt-embed ratio ratio-16x9 rounded shadow">
+            <button class="yt-thumb" type="button" data-video-id="QoCxb0qwwh0" aria-label="Play video">
+                <img src="img/Captură de ecran 2025-10-10 103343.png" alt="Stamp Factory — 153 years of history"
+                    loading="lazy" />
+                <span class="yt-play"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="site-footer container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <!-- Logo + tagline -->
+                <div class="col-lg-4 col-md-6 ps-0">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
+                        <a href="index_engleza.html" class="navbar-brand p-0">
+                            <img src="img/Logo-POSTA-Tipografie.png" alt="Romanian Post Printing"
+                                style="max-height:96px;height:auto;filter:brightness(0) invert(1);" />
+                        </a>
+                        <p class="mt-3 mb-0">Stamp Factory — premium printing since 1872.</p>
+                    </div>
+                </div>
+
+                <!-- Right columns -->
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <!-- Contact details -->
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Contact details</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Str. Fabrica de Chibrituri 28, Bucharest 050183</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">ft@posta-romana.ro</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+40 21 335 5350</p>
+                            </div>
+                            <div class="d-inline-flex align-items-center" style="height:45px;">
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                    href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank"
+                                    rel="noopener" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f fw-normal"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                    href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram fw-normal"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                                    href="mailto:ft@posta-romana.ro" aria-label="Send email">
+                                    <i class="fa fa-envelope-open fw-normal"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Navigation</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="about_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>About us</a>
+                                <a class="text-light mb-2" href="servicii_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                                <a class="text-light mb-2" href="blog_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>News</a>
+                                <a class="text-light" href="contact_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contact us</a>
+                            </div>
+                        </div>
+
+                        <!-- Most searched -->
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Most searched</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="about_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>About us</a>
+                                <a class="text-light mb-2" href="service_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                                <a class="text-light mb-2" href="blog_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>News</a>
+                                <a class="text-light" href="contact_engleza.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brands strip -->
+            <div class="row footer-brands-row pt-2 mt-2 border-top border-white-10">
+                <div class="col-12">
+                    <div class="footer-brands">
+                        <a href="https://imobiliare.posta-romana.ro/" target="_blank" rel="noopener">
+                            <img class="footer-brand" src="img/Untitled image(55).png" alt="Poșta Imobiliare" />
+                        </a>
+                        <img class="footer-brand" src="img/Untitled image(56).png" alt="Poșta Tipografie" />
+                        <img class="footer-brand" src="img/Untitled image(56)(57).png" alt="Universal Postal Service" />
+                        <img class="footer-brand" src="img/Untitled image(56)(58).png" alt="Poșta Finance" />
+                        <img class="footer-brand" src="img/Untitled image(56)(59).png" alt="Poșta Logistics" />
+                        <img class="footer-brand footer-brand--zor" src="img/Untitled image(51).png"
+                            alt="ZOR — Romanian Post" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <div class="container-fluid text-white" style="background:#061429;">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="d-flex align-items-center justify-content-center" style="height:75px;">
+                        <p class="mb-0">
+                            &copy; <span id="year"></span> Stamp Factory — National Company Romanian Post S.A. All
+                            rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // set current year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Carousels -->
+    <script>
+        $(function () {
+            /* Premium belt – continuous scroll */
+            $('.about-media-carousel').owlCarousel({
+                loop: true,
+                nav: false,
+                dots: false,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 0,
+                autoplayHoverPause: false,
+                smartSpeed: 12000,
+                slideTransition: 'linear',
+                responsive: {
+                    0: { items: 1.2 },
+                    576: { items: 2.2 },
+                    992: { items: 3.2 },
+                    1400: { items: 4.2 }
+                }
+            });
+
+            /* Heritage carousel – elegant fade between the 2 images */
+            $('.heritage-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3200,
+                autoplayHoverPause: false,
+                smartSpeed: 650,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn'
+            });
+        });
+    </script>
+
+    <script>
+        // Replace thumbnail with YouTube iframe on click
+        document.addEventListener('click', function (e) {
+            const btn = e.target.closest('.yt-thumb');
+            if (!btn) return;
+
+            const id = btn.getAttribute('data-video-id');
+            const wrapper = btn.parentElement;
+
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+            iframe.title = 'Stamp Factory presentation';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowFullscreen = true;
+            iframe.frameBorder = '0';
+            iframe.loading = 'lazy';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+
+            wrapper.replaceChildren(iframe);
+        });
+    </script>
+</body>
+
+</html>

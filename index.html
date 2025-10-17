@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fabrica de Timbre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tipărim timbre personalizate cu finisaje premium: folio, embosare, holograme. Producție rapidă, calitate garantată. Cere ofertă acum!">
+    <meta name="keywords"
+        content="timbre personalizate, tipografie timbre, folio, embosare, holograme, fabrica de timbre">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/Untitled image(56).png">
+    <link rel="shortcut icon" type="image/png" href="img/Untitled image(56).png">
+    <link rel="apple-touch-icon" href="img/Untitled image(56).png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font special pentru titlul din hero -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Mic override: font doar pentru titlul din hero -->
+    <style>
+        .hero-title {
+            font-family: 'Playfair Display', serif !important;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: .5px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start (identic cu about.html) -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row g-3 g-lg-0">
+
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height:45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Strada Fabrica de Chibrituri
+                        28, București 050183</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>021 335 5350</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>ft@posta-romana.ro</small>
+                </div>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height:45px;">
+                    <!-- Facebook -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank" rel="noopener"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f fw-normal"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram fw-normal"></i>
+                    </a>
+
+                    <!-- Email -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                        href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
+                        <i class="fa fa-envelope-open fw-normal"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar nav-tiles navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+
+
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/header-site-Posta-Tipografie.png" alt="Fabrica de Timbre" class="brand-logo" />
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <!-- poți lăsa și <span class="fa fa-bars"></span> dacă preferi -->
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Servicii</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Noutăți</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                    <!-- RO/EN intră și ele în meniu pe mobil -->
+                    <li class="nav-item ms-lg-3">
+                        <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
+                            <a class="btn btn-sm btn-light text-dark px-2" href="index.html" aria-label="Română"
+                                aria-current="true">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="index_engleza.html"
+                                aria-label="English">EN</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+    </div>
+    </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- ===== HERO CAROUSEL (2 x VIDEO SLIDES) ===== -->
+    <!-- Fix săgeți: z-index mai mare + overlay fără pointer-events -->
+    <style>
+        .carousel-control-prev,
+        .carousel-control-next {
+            z-index: 5;
+        }
+
+        .video-overlay {
+            pointer-events: none;
+
+        }
+
+        /* Nudge: aliniază titlul pe nivelul săgeților (centru vertical, puțin mai sus) */
+
+
+        /* opțional: micșorează spațiul de sub titlu ca să nu „tragă” în jos */
+        #header-carousel .carousel-caption h1 {
+            margin-bottom: 0.5rem;
+        }
+
+
+        /* overlay-ul nu blochează clickurile pe săgeți */
+    </style>
+
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="7000">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- SLIDE 1 (VIDEO) -->
+            <div class="carousel-item active">
+                <!-- hero mai scund + crop sus -->
+                <div class="video-slide" style="position:relative;overflow:hidden;">
+
+                    <video class="bg-video" autoplay muted loop playsinline
+                        style="width:100%;height:100%;object-fit:cover;object-position:center 72%;">
+                        <source src="img/202509261547 (1).mp4" type="video/mp4" />
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+
+                <!-- TEXT PESTE VIDEO -->
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 720px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">TIMBRE PERSONALIZATE</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn hero-title">Fabrica de Timbre</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2 (VIDEO) -->
+            <div class="carousel-item">
+                <div class="video-slide" style="position:relative;overflow:hidden;">
+
+                    <video class="bg-video" autoplay muted loop playsinline
+                        style="width:100%;height:100%;object-fit:cover;object-position:center 72%;">
+                        <source src="img/202509261547 (2).mp4" type="video/mp4" />
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+
+                <!-- TEXT PESTE VIDEO -->
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 720px;">
+                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">CALITATE &amp; RAPIDITATE</h5>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn hero-title">
+                            Tradiție în tipar, inovație în fiecare timbru.
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Controls (vizibile și clicabile) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev"
+            aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next"
+            aria-label="Următor">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- ===== HERO CAROUSEL End ===== -->
+    </div>
+
+
+
+    <!-- Navbar & Carousel End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts py-5 pt-lg-0 over-hero">
+
+        <div class="container py-5 pt-lg-0">
+            <div class="row gx-0">
+                <!-- Ani de tradiție (din 1872) -->
+                <div class="col-12 col-lg-4 mb-3 mb-lg-0 wow zoomIn" data-wow-delay="0.1s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height:150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width:60px;height:60px;">
+                            <i class="fa fa-landmark text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Ani de tradiție</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">153</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tipuri de tipar -->
+                <div class="col-12 col-lg-4 mb-3 mb-lg-0 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="bg-light shadow d-flex align-items-center justify-content-center p-4"
+                        style="height:150px;">
+                        <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width:60px;height:60px;">
+                            <i class="fa fa-print text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-primary mb-0">Tipuri de tipar</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">3</h1>
+                            <small class="text-muted">înalt • plan • adânc</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Elemente anti-fals -->
+                <div class="col-12 col-lg-4 mb-3 mb-lg-0 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                        style="height:150px;">
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                            style="width:60px;height:60px;">
+                            <i class="fa fa-shield-alt text-primary"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="text-white mb-0">Elemente anti-fals</h5>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">10</h1>
+                            <small class="text-light">microtext, holograme, UV, filigran „FT”, timbru sec…</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+
+    <!-- Features Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 800px;">
+                <h5 class="fw-bold text-primary text-uppercase">De ce noi?</h5>
+                <h1 class="mb-0">Expertiză tipografică pentru timbre sigure și memorabile</h1>
+            </div>
+
+            <div class="row g-5">
+                <!-- Col stânga (2 beneficii) -->
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width:60px;height:60px;">
+                                <i class="fa fa-shield-alt text-white"></i>
+                            </div>
+                            <h4>Securitate anti-fals</h4>
+                            <p class="mb-0">
+                                Microtext, filigran „FT”, cerneluri speciale (UV, termo/fotocromice), holograme și
+                                numerotare unică – suite completă de protecție pentru emisiuni oficiale.
+                            </p>
+                        </div>
+
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width:60px;height:60px;">
+                                <i class="fa fa-industry text-white"></i>
+                            </div>
+                            <h4>3 tehnologii de tipar</h4>
+                            <p class="mb-0">
+                                Operăm tipar înalt, plan și adânc – alegem tehnologia optimă pentru tiraj, suport și
+                                nivelul de detaliu dorit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagine / video central -->
+                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s" style="min-height:350px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/1702569477843.jpg"
+                            alt="Fabrica de Timbre – producție" style="object-fit:cover;">
+                    </div>
+                </div>
+
+                <!-- Col dreapta (2 beneficii) -->
+                <div class="col-lg-4">
+                    <div class="row g-5">
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width:60px;height:60px;">
+                                <i class="fa fa-pencil-ruler text-white"></i>
+                            </div>
+                            <h4>Personalizare & DTP</h4>
+                            <p class="mb-0">
+                                Concepție grafică, prepress și probe de tipar. Finisaje premium: folio, embosare, timbru
+                                sec, perfor, lipici gumat sau autoadeziv.
+                            </p>
+                        </div>
+
+                        <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+                                style="width:60px;height:60px;">
+                                <i class="fa fa-stopwatch text-white"></i>
+                            </div>
+                            <h4>Termene rapide & QC</h4>
+                            <p class="mb-0">
+                                Planificare clară, trasabilitate pe loturi și control de calitate la fiecare etapă –
+                                livrare punctuală pentru tiraje mici și medii.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Servicii + restul paginii (nemodificate) -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 700px;">
+                <h5 class="fw-bold text-primary text-uppercase">Serviciile Noastre</h5>
+                <h1 class="mb-0">Tipar premium, de la prepress la finisare</h1>
+            </div>
+
+            <div class="row g-5">
+                <!-- DTP & Prepress -->
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.2s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon"><i class="fa fa-drafting-compass text-white"></i></div>
+                        <h4 class="mb-3">DTP & Prepress</h4>
+                        <p class="m-0">Concepție grafică, tehnoredactare, selecții de culoare, procesare imagine și
+                            filme pentru offset.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="service.html#prepress"><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Imprimare securizată -->
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon"><i class="fa fa-shield-alt text-white"></i></div>
+                        <h4 class="mb-3">Imprimare securizată</h4>
+                        <p class="m-0">Tipar înalt, plan, adânc + microtext, UV, holograme, filigran „FT”, timbru sec,
+                            inseriere.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="service.html#securizat"><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Timbre & filatelie -->
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.4s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon"><i class="fa fa-stamp text-white"></i></div>
+                        <h4 class="mb-3">Timbre & filatelie</h4>
+                        <p class="m-0">Timbre 1–6 culori, maxime, întreguri poștale, plicuri tematice și pre-plătite.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded" href="service.html#timbre"><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Tipar digital & date variabile -->
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.5s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon"><i class="fa fa-digital-tachograph text-white"></i></div>
+                        <h4 class="mb-3">Tipar digital & VDP</h4>
+                        <p class="m-0">Personalizare cu date variabile, pre-tipar + digital, insert automat în plic DL
+                            cu fereastră.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="service.html#digital"><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Finisare & legătorie -->
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon"><i class="fa fa-tools text-white"></i></div>
+                        <h4 class="mb-3">Finisare & legătorie</h4>
+                        <p class="m-0">Foldare, brosare/legare, spiralare, ștanțare, lăcuire/plastifiere pentru look
+                            premium.</p>
+                        <a class="btn btn-lg btn-primary rounded" href="service.html#finisare"><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Consumabile & alte servicii -->
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.7s">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon"><i class="fa fa-cogs text-white"></i></div>
+                        <h4 class="mb-3">Consumabile & altele</h4>
+                        <p class="m-0">Polimeri pentru ștampile, ascuțit cuțite ghilotină, copiere plăci, plastifiere.
+                        </p>
+                        <a class="btn btn-lg btn-primary rounded" href="service.html#consumabile"><i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-none">
+                    <div
+                        class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                        <h3 class="text-white mb-3">Solicită ofertă</h3>
+                        <p class="text-white mb-3">Trimite fișierul și specificațiile — revenim rapid cu cost și termen.
+                        </p>
+                        <h2 class="text-white mb-0">+021 000 000</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Soluții tehnologice Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="solutii-tehnologice">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 860px;">
+                <h5 class="fw-bold text-primary text-uppercase">Soluții tehnologice</h5>
+                <h1 class="mb-0">Inovație în producția de documente & timbre la Fabrica de Timbre</h1>
+            </div>
+
+            <div class="row g-0">
+                <!-- Card 1 -->
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.2s">
+                    <div class="bg-light rounded h-100">
+                        <div class="border-bottom py-4 px-5 mb-4 d-flex align-items-center">
+                            <div class="bg-primary text-white d-inline-flex align-items-center justify-content-center rounded me-3"
+                                style="width:48px;height:48px;">
+                                <i class="fa fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-primary mb-1">Linie de insert BÖWE</h4>
+                                <small class="text-uppercase">împlicuire automată</small>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-6 mb-3">
+                                <small class="align-bottom" style="font-size:16px; line-height: 40px;">până la</small>
+                                22.000
+                                <small class="align-bottom" style="font-size:16px; line-height: 40px;">
+                                    materiale/oră</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Selecție multi-document</span><i
+                                    class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Citire coduri & potrivire
+                                    seturi</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Control calitate &
+                                    trasabilitate</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Formate DL / C5 / C4</span><i
+                                    class="fa fa-check text-primary pt-1"></i></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.4s">
+                    <div class="bg-white rounded shadow position-relative h-100" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4 d-flex align-items-center">
+                            <div class="bg-primary text-white d-inline-flex align-items-center justify-content-center rounded me-3"
+                                style="width:48px;height:48px;">
+                                <i class="fa fa-print"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-primary mb-1">Tipar digital Canon</h4>
+                                <small class="text-uppercase">policromie de mare viteză</small>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-6 mb-3">
+                                <small class="align-bottom" style="font-size:16px; line-height: 40px;">până la</small>
+                                210
+                                <small class="align-bottom" style="font-size:16px; line-height: 40px;"> coli
+                                    A4/minut</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Calitate foto, culori
+                                    stabile</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Personalizare cu date
+                                    variabile</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Suporturi diverse & finisări</span><i
+                                    class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Integrare prepress/DTP</span><i
+                                    class="fa fa-check text-primary pt-1"></i></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="bg-light rounded h-100">
+                        <div class="border-bottom py-4 px-5 mb-4 d-flex align-items-center">
+                            <div class="bg-primary text-white d-inline-flex align-items-center justify-content-center rounded me-3"
+                                style="width:48px;height:48px;">
+                                <i class="fa fa-route"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-primary mb-1">Print + Insert + Expediere</h4>
+                                <small class="text-uppercase">serviciu complet</small>
+                            </div>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-6 mb-3">
+                                <small class="align-bottom" style="font-size:16px; line-height: 40px;">un singur
+                                    flux</small> end-to-end
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>Tipărire personalizată</span><i
+                                    class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Împlicuire automată &
+                                    verificare</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Trasabilitate pe serii unice</span><i
+                                    class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Livrare prin rețeaua Poștei
+                                    Române</span><i class="fa fa-check text-primary pt-1"></i></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Soluții tehnologice End -->
+
+    <!-- Obiectivele SFT -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="obiective-sft">
+        <div class="container py-5">
+            <div class="section-title position-relative pb-2 mb-4">
+                <h6 class="fw-bold text-primary text-uppercase mb-3 text-center">OBIECTIVE</h6>
+                <h1 class="mb-4 text-center">Obiectivele Sucursalei Fabrica de Timbre</h1>
+            </div>
+
+
+            <div class="row g-5">
+                <!-- Obiectivele (3 carduri) — neschimbate -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-light rounded h-100 p-4 wow zoomIn" data-wow-delay="0.2s">
+                        <div class="d-flex align-items-center mb-3">
+                            <span
+                                class="bg-primary d-inline-flex align-items-center justify-content-center rounded me-3"
+                                style="width:56px;height:56px;">
+                                <i class="fa fa-book-open text-white"></i>
+                            </span>
+                            <h4 class="mb-0">Tipărire offset & digital</h4>
+                        </div>
+                        <p class="mb-0">Dezvoltarea serviciilor de <strong>tipărire, offset sau digital</strong>,
+                            inclusiv pentru
+                            <strong>tipărirea de cărți</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-light rounded h-100 p-4 wow zoomIn" data-wow-delay="0.35s">
+                        <div class="d-flex align-items-center mb-3">
+                            <span
+                                class="bg-primary d-inline-flex align-items-center justify-content-center rounded me-3"
+                                style="width:56px;height:56px;">
+                                <i class="fa fa-database text-white"></i>
+                            </span>
+                            <h4 class="mb-0">Scanare & arhivare</h4>
+                        </div>
+                        <p class="mb-0">Dezvoltarea serviciilor de <strong>scanare</strong>, <strong>arhivare
+                                electronică</strong>
+                            și <strong>arhivare fizică</strong> a documentelor <strong>CNPR</strong> sau ale terților.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <div class="bg-light rounded h-100 p-4 wow zoomIn" data-wow-delay="0.5s">
+                        <div class="d-flex align-items-center mb-3">
+                            <span
+                                class="bg-primary d-inline-flex align-items-center justify-content-center rounded me-3"
+                                style="width:56px;height:56px;">
+                                <i class="fa fa-tools text-white"></i>
+                            </span>
+                            <h4 class="mb-0">Gestiune & mentenanță</h4>
+                        </div>
+                        <p class="mb-0">Efectuarea operațiunilor necesare pentru <strong>curățenia</strong>,
+                            <strong>inventarierea</strong>,
+                            <strong>casarea</strong> și <strong>actualizarea</strong> mijloacelor fixe și obiectelor de
+                            inventar pentru întreaga organigramă SFT.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Obiectivele SFT -->
+
+    <!-- Declarații oficiale -->
+    <div class="container-fluid py-5 wow FadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 820px;">
+                <h5 class="fw-bold text-primary text-uppercase">Declarații oficiale</h5>
+                <h1 class="mb-0">Despre modernizarea Poștei Române și Fabrica de Timbre</h1>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="testimonial-item bg-light h-100">
+                        <div class="d-flex align-items-center border-bottom pt-4 pb-3 px-4">
+                            <img class="img-fluid rounded" src="img/images.jpg" alt="Sebastian Burduja"
+                                style="width:60px;height:60px;">
+                            <div class="ps-3">
+                                <h4 class="text-primary mb-1">Sebastian Burduja</h4>
+                                <small class="text-uppercase">ministru al energiei</small>
+                            </div>
+                        </div>
+                        <div class="pt-3 pb-4 px-4" style="text-align:justify;">
+                            „Poșta se modernizează, este un mesaj important care ne arată cât de vitală este
+                            stabilitatea unei echipe
+                            de conducere. Vorbim despre o echipă care a performat, deși nu este pe un mandat plin. Îmi
+                            doresc foarte mult
+                            să avem stabilitate și predictibilitate. Diferența dintre un politician și un lider este
+                            simplă: politicienii
+                            se gândesc la următoarele alegeri, iar liderii se gândesc la următoarele generații. Ceea ce
+                            vedem astăzi, aici,
+                            este o echipă, o companie care se gândește la următoarele generații, privește și respectă
+                            trecutul, o istorie
+                            de 160 de ani, dar are și o perspectivă de viitor.”
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="testimonial-item bg-light h-100">
+                        <div class="d-flex align-items-center border-bottom pt-4 pb-3 px-4">
+                            <img class="img-fluid rounded"
+                                src="img/Director-General-Valentin-Stefan-(resize-crop-foto).jpg" alt="Valentin Ștefan"
+                                style="width:60px;height:60px;">
+                            <div class="ps-3">
+                                <h4 class="text-primary mb-1">Valentin Ștefan</h4>
+                                <small class="text-uppercase">Director General, Poșta Română</small>
+                            </div>
+                        </div>
+                        <div class="pt-3 pb-4 px-4" style="text-align:justify;">
+                            „În anul în care Fabrica de Timbre împlinește 150 de ani de activitate, iar Poșta Română
+                            aniversează 160 de ani,
+                            vedem multe rezultate ale transformării companiei. Aceste dotări pe care Poșta Română le-a
+                            adus sunt cheia
+                            dezvoltării Fabricii de Timbre pe termen mediu și lung. Este un nou pas către ceea ce ne
+                            dorim să realizăm în
+                            Poșta Română: digitalizare, revitalizare și performanță. În termeni simpli, de astăzi, Poșta
+                            Română poate
+                            participa la licitații și contracte importante fără a fi nevoită să devină subcontractor sau
+                            partener, putând
+                            prelua lucrări integrate de tipar, insert și expediție.”
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Start -->
+    <footer class="site-footer container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <!-- Logo + tagline -->
+                <div class="col-lg-4 col-md-6 ps-0">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
+                        <a href="index.html" class="navbar-brand p-0">
+                            <img src="img/Logo-POSTA-Tipografie.png" alt="Poșta Tipografie"
+                                style="max-height:96px;height:auto;filter:brightness(0) invert(1);" />
+                        </a>
+                        <p class="mt-3 mb-0">Fabrica de Timbre — tipar premium din 1872.</p>
+                    </div>
+                </div>
+
+                <!-- Coloane dreapta -->
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <!-- Date de contact -->
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Date de contact</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Strada Fabrica de Chibrituri 28, București 050183</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">ft@posta-romana.ro</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">021 335 5350</p>
+                            </div>
+                            <div class="d-inline-flex align-items-center" style="height:45px;">
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                    href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank"
+                                    rel="noopener" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f fw-normal"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                    href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram fw-normal"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                                    href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
+                                    <i class="fa fa-envelope-open fw-normal"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Navigație -->
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Navigație</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
+                                <a class="text-light mb-2" href="about.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
+                                <a class="text-light mb-2" href="service.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
+                                <a class="text-light mb-2" href="blog.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
+                                <a class="text-light" href="contact.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
+                            </div>
+                        </div>
+
+                        <!-- Cele mai căutate -->
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Cele mai căutate</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
+                                <a class="text-light mb-2" href="about.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
+                                <a class="text-light mb-2" href="service.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
+                                <a class="text-light mb-2" href="blog.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
+                                <a class="text-light" href="contact.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strip de brand (în interiorul aceluiași .container) -->
+            <div class="row footer-brands-row pt-2 mt-2 border-top border-white-10">
+
+                <div class="col-12">
+                    <div class="footer-brands">
+                        <a href="https://imobiliare.posta-romana.ro/" target="_blank" rel="noopener">
+                            <img class="footer-brand" src="img/Untitled image(55).png" alt="Poșta Imobiliare">
+                        </a>
+                        <img class="footer-brand" src="img/Untitled image(56).png" alt="Poșta Tipografie">
+                        <img class="footer-brand" src="img/Untitled image(56)(57).png" alt="Oficiul Poștal Universal">
+                        <img class="footer-brand" src="img/Untitled image(56)(58).png" alt="Poșta Finance">
+                        <img class="footer-brand" src="img/Untitled image(56)(59).png" alt="Poșta Logistics">
+                        <img class="footer-brand footer-brand--zor" src="img/Untitled image(51).png"
+                            alt="ZOR — Poșta Română">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer End -->
+
+
+
+
+    <div class="container-fluid text-white" style="background:#061429;">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="d-flex align-items-center justify-content-center" style="height:75px;">
+                        <p class="mb-0">
+                            &copy; <span id="year"></span> Sucursala Fabrica de Timbre — Compania Națională Poșta Română
+                            S.A. Toate drepturile rezervate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // setează automat anul curent
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+    <!-- Template Javascript -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Scriptul pentru activarea tab-ului din hash -->
+    <script>
+        (function () {
+            const { Tab } = bootstrap;
+            function openFromHash() {
+                const id = location.hash?.replace('#', '');
+                if (!id) return;
+                const target = document.getElementById(id);
+                const btn = document.querySelector('[data-bs-target="#' + id + '"]');
+                if (target && btn) new Tab(btn).show();
+            }
+            openFromHash();
+            document.querySelectorAll('.service-nav [data-bs-toggle="pill"]').forEach(btn => {
+                btn.addEventListener('shown.bs.tab', e => {
+                    const target = e.target.getAttribute('data-bs-target');
+                    if (target) history.replaceState(null, '', target);
+                });
+            });
+        })();
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+
+    <script>
+        document.querySelectorAll('.lang-switch a').forEach(a => {
+            a.addEventListener('click', function (e) {
+                window.location.href = this.getAttribute('href');
+            }, true); // capture = true, rulează înaintea altor handler-e
+        });
+    </script>
+
+
+
+
+
+
+</body>
+
+
+
+</html>

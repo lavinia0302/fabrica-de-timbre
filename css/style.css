@@ -1,0 +1,3162 @@
+/********************
+ *   THEME COLORS   *
+ ********************/
+:root {
+    --primary: #ea0029;
+    /* roșu Poșta Tipografie */
+    --secondary: #D6C3A5;
+    /* bej sand */
+    --light: #FAF7F2;
+    --dark: #111827;
+}
+
+
+
+@media (max-width:991.98px) {
+    .navbar .brand-logo {
+        height: 48px;
+    }
+}
+
+
+
+
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
+}
+
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    filter: brightness(.95);
+}
+
+.btn-secondary {
+    background: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: #fff !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    filter: brightness(1.05);
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    text-align: center;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-pill {
+    border-radius: 999px;
+    padding: 8px 14px;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+/********************
+ *     SPINNER      *
+ ********************/
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    margin: 100px auto;
+    animation: spinBox 1.2s infinite ease-in-out;
+}
+
+@keyframes spinBox {
+    0% {
+        transform: perspective(120px) rotateX(0) rotateY(0);
+    }
+
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility 0s .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s, visibility 0s;
+}
+
+/********************
+ *     HEADINGS     *
+ ********************/
+h1,
+h2,
+.fw-bold {
+    font-weight: 800 !important;
+}
+
+h3,
+h4,
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+h5,
+h6,
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+/********************
+ *      NAVBAR      *
+ ********************/
+.navbar-dark {
+    background: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-left: 25px;
+    padding: 22px 0;
+    color: #111827;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: #111827;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Hamburger cu 3 linii roșii (Bootstrap 5) */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='red' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* (opțional) contur roșu la buton */
+.navbar-dark .navbar-toggler {
+    color: red !important;
+    border-color: red !important;
+}
+
+/* (opțional) focus vizibil pe tastatură */
+.navbar-dark .navbar-toggler:focus {
+    box-shadow: 0 0 0 .25rem rgba(255, 0, 0, .25);
+}
+
+/* Toggler peste logo, pe mobil */
+@media (max-width: 991.98px) {
+    nav.navbar {
+        position: relative;
+    }
+
+    /* logo-ul rămâne dedesubt */
+    .navbar .navbar-brand {
+        z-index: 1;
+        padding-right: 64px;
+    }
+
+    /* loc ca să nu calce peste buton */
+
+    .navbar .navbar-toggler {
+        position: absolute;
+        top: 10px;
+        /* ajustează 6–14px după cum vrei */
+        right: 12px;
+        z-index: 1200;
+        /* peste logo și panglică */
+        background: #fff;
+        /* fundal alb ca să se vadă pe video/panglică */
+        border: 2px solid red;
+        border-radius: 10px;
+        padding: 6px 8px;
+    }
+
+    /* panoul meniului pornește sub bară, nu peste buton */
+    .navbar .navbar-collapse {
+        top: 100%;
+    }
+}
+
+/* linii roșii pentru hamburger (dacă nu le ai deja) */
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='red' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+@media (max-width:991.98px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+        background: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 12px 0;
+        color: #111827;
+    }
+}
+
+@media (min-width:992px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
+        z-index: 999;
+    }
+
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #fff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -1px;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: .3s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        left: 0;
+        width: 100%;
+    }
+}
+
+/********************
+ *  HEADER / HERO   *
+ ********************/
+.carousel-caption {
+    inset: 0;
+    background: rgba(17, 24, 39, .72);
+    z-index: 1;
+}
+
+@media (max-width:576px) {
+    .carousel-caption h5 {
+        font-size: 14px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+/* săgeți mai înguste */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/********************
+ *  SECTION TITLE   *
+ ********************/
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    /* din stânga → centru */
+    transform: translateX(-50%);
+    /* corecție matematică */
+    background: var(--primary);
+}
+
+
+
+.section-title.section-title-sm::before {
+    width: 90px;
+    height: 3px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    /* pornește din centru */
+    background: var(--primary);
+    animation: section-title-run-center 5s infinite linear;
+}
+
+/* Noua animație – bara mică se mișcă simetric din centru */
+@keyframes section-title-run-center {
+    0% {
+        margin-left: -75px;
+    }
+
+    50% {
+        margin-left: 75px;
+    }
+
+    100% {
+        margin-left: -75px;
+    }
+}
+
+.section-title.section-title-sm::after {
+    width: 4px;
+    height: 3px;
+}
+
+.section-title.text-center::after {
+    animation: section-title-run-center 5s infinite linear;
+}
+
+
+
+
+
+/********************
+ * SERVICE (V1)
+ ********************/
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: .3s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+/********************
+ *  TESTIMONIALS
+ ********************/
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #DDD;
+    border-radius: 2px;
+    transition: .3s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item.center {
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+    transition: .3s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: #fff !important;
+    box-shadow: 0 0 30px #DDD;
+}
+
+/********************
+ *       TEAM
+ ********************/
+.team-item {
+    transition: .3s;
+}
+
+.team-social {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.team-social a.btn {
+    margin: 0 3px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.team-item:hover {
+    box-shadow: 0 0 30px #DDD;
+}
+
+.team-item:hover .team-social {
+    background: rgba(17, 24, 39, .72);
+}
+
+.team-item:hover .team-social a.btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s 0s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .05s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .1s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(4) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .15s;
+}
+
+.team-item .team-img img,
+.blog-item .blog-img img {
+    transition: .5s;
+}
+
+.team-item:hover .team-img img,
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+/********************
+ *      MISC
+ ********************/
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.bg-header {
+    background: linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)), url(../img/carousel-1.jpg) center/cover no-repeat;
+}
+
+.link-animated a {
+    transition: .3s;
+}
+
+.link-animated a:hover {
+    padding-left: 10px;
+}
+
+@media (min-width:767.98px) {
+    .footer-about {
+        margin-bottom: -75px;
+    }
+}
+
+/********************
+ *  FOOTER & LOGO
+ ********************/
+.footer-about .bg-primary {
+    width: 100% !important;
+    min-height: 340px;
+    padding: 3rem 2rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-logo {
+    height: 96px;
+    width: auto;
+    display: block;
+}
+
+@media (max-width:991.98px) {
+    .footer-about .bg-primary {
+        min-height: 260px;
+        padding: 2rem 1.25rem;
+    }
+
+    .footer-logo {
+        height: 72px;
+    }
+}
+
+/********************
+ *  PAGE HEADERS
+ ********************/
+.bg-header-about {
+    background: linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
+        url("../img/37031075_2162048520504555_8133191435982733312_n.jpg") center/cover no-repeat;
+    min-height: 560px;
+    /* ↑ fă-l cât vrei: 520–720px etc. */
+    display: flex;
+    align-items: center;
+    /* centrează vertical conținutul */
+}
+
+.bg-header-about .row {
+    width: 100%;
+}
+
+
+.bg-header-services {
+    background: linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
+        url("../img/Captură de ecran 2025-09-30 124516.png") center/cover no-repeat;
+}
+
+/* Noutăți / Blog – HERO specific */
+.bg-header-news {
+    background:
+        linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
+        url("../img/20251013_0907_Ziare Proaspăt Tipărite_simple_compose_01k7e2v1w8f4m872x7a8d0ca3b.png") center/cover no-repeat;
+}
+
+
+/********************
+ * SERVICE TABS V2
+ ********************/
+.service-nav .service-pill {
+    background: #fff;
+    border: 1px solid rgba(17, 24, 39, .08);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #111827;
+    text-align: left;
+    transition: .2s ease;
+}
+
+.service-nav .service-pill i {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(154, 50, 50, .08);
+    color: var(--primary);
+}
+
+.service-nav .service-pill:hover {
+    transform: translateX(4px);
+}
+
+.service-nav .service-pill.active {
+    background: linear-gradient(90deg, rgba(154, 50, 50, .10), rgba(154, 50, 50, .02));
+    border-color: var(--primary);
+    color: #111827;
+}
+
+/********************
+ * SERVICE CARD V2
+ ********************/
+.service-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(16, 24, 40, .06);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(16, 24, 40, .12);
+}
+
+.service-cover {
+    position: relative;
+    height: 260px;
+    background: #f4f4f5;
+}
+
+@media (max-width:991.98px) {
+    .service-cover {
+        height: 200px;
+    }
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.service-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/********************
+ *   CHECK LISTS
+ ********************/
+.check-list {
+    list-style: disc !important;
+    padding-left: 1.25rem;
+    margin-left: .25rem;
+}
+
+.check-list li {
+    padding-left: 0;
+}
+
+/******************************************************
+ *  ABOUT PAGE — PREMIUM MEDIA CAROUSEL (OWL)
+ ******************************************************/
+.about-media-band {
+    position: relative;
+    margin-top: 2.25rem;
+    padding: 18px 0;
+    background: linear-gradient(180deg, #fff 0, #fafafa 100%);
+    border-radius: 14px;
+    box-shadow: 0 10px 26px rgba(16, 24, 40, .06);
+}
+
+.about-media-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+.about-media-carousel .owl-item {
+    padding: 0 2px;
+}
+
+.media-tile.pro {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eaeef3;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .06);
+    transform: translateZ(0);
+}
+
+.media-tile.pro::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+/* 16:9 */
+.media-tile.pro>img,
+.media-tile.pro>video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .7s ease;
+}
+
+.media-tile.pro:hover>img,
+.media-tile.pro:hover>video {
+    transform: scale(1.04);
+}
+
+.media-tile.pro figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    color: #fff;
+    font-weight: 700;
+    font-size: .95rem;
+    letter-spacing: .1px;
+    opacity: .0;
+    transform: translateY(8px);
+    transition: .35s ease;
+}
+
+.media-tile.pro::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 35%, rgba(15, 23, 42, .55) 100%);
+    opacity: .0;
+    transition: .35s ease;
+}
+
+.media-tile.pro:hover::after {
+    opacity: 1;
+}
+
+.media-tile.pro:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-media-carousel .owl-dots,
+.about-media-carousel .owl-nav {
+    display: none !important;
+}
+
+/******************************************************
+ *  HERITAGE CAROUSEL (2 imagini cu fade)
+ ******************************************************/
+.heritage-frame {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.heritage-carousel .heritage-slide {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.heritage-carousel .heritage-slide::before {
+    content: "";
+    display: block;
+    padding-top: 42.857%;
+}
+
+/* 21:9 */
+.heritage-carousel .heritage-slide>img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.heritage-carousel .heritage-slide:hover>img {
+    transform: scale(1.02);
+}
+
+.heritage-carousel .owl-dots {
+    margin-top: 10px;
+}
+
+.heritage-carousel .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+}
+
+.heritage-carousel .owl-dots .owl-dot.active span {
+    transform: scale(1.3);
+    background: var(--primary);
+}
+
+/********************
+ *  ACCESSIBILITY
+ ********************/
+:focus-visible {
+    outline: 2px dashed var(--primary);
+    outline-offset: 2px;
+}
+
+/* lățimea maximă a blocului de text din hero */
+.carousel-caption .p-3 {
+    max-width: 800px;
+}
+
+
+#header-carousel .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    /* centrează perfect clipul */
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+/* === Lite YouTube embed (thumbnail) === */
+.yt-embed {
+    overflow: hidden;
+}
+
+.yt-thumb {
+    position: relative;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background: #000;
+}
+
+.yt-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.9);
+    transition: transform .3s ease, filter .3s ease;
+}
+
+.yt-thumb:hover img {
+    transform: scale(1.02);
+    filter: brightness(.95);
+}
+
+/* buton play (stil YouTube) */
+.yt-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 68px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    background: #ff0000;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+}
+
+.yt-play::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 14px;
+    border-style: solid;
+    border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent #fff;
+}
+
+/* corectare poziționare în wrapperul .ratio */
+.yt-embed {
+    position: relative;
+}
+
+/* asigurăm contextul */
+.yt-embed .yt-thumb {
+    /* copilul trebuie ABSOLUTE */
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0; */
+    width: 100%;
+    height: 100%;
+}
+
+.yt-thumb img {
+    display: block;
+}
+
+/* (siguranță) */
+/* Galerie noutate – imagine 1-la-1 cu săgeți */
+.news-gallery .carousel-item {
+    height: 56vw;
+    /* raport ~16:9 pe mobile */
+    max-height: 560px;
+    /* plafon pe desktop */
+}
+
+@media (min-width: 992px) {
+    .news-gallery .carousel-item {
+        height: 520px;
+        /* înălțime confortabilă pe desktop */
+    }
+}
+
+.news-gallery .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* umple cadrul frumos */
+}
+
+.bg-header-energy {
+    background:
+        linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
+        url("../img/galerie/480841231_935640952102106_8780350427671069781_n.jpg") center/cover no-repeat;
+}
+
+#galerieEnergy .carousel-item img {
+    cursor: pointer;
+}
+
+/* Header specific pentru noutatea RRA */
+.bg-header-rra {
+    background:
+        linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
+        url("../img/20251013_1015_Imagine Radio Clară_remix_01k7e6p7tyeb5v19fj7m43xf3e.png") center/cover no-repeat;
+}
+
+/* Header specific pentru „File de istorie” */
+.bg-header-file-istorie {
+    background:
+        linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
+        url("../img/galerie2/480893044_1786464775532085_3890574347263827693_n.jpg") center/cover no-repeat;
+}
+
+/* Oprește efectele WOW/animate.css peste tot */
+.wow {
+    visibility: visible !important;
+}
+
+.animated,
+.animate__animated {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Hero uniform pentru toate paginile */
+.hero-std {
+    /* aceeași „mărime” ca pe about.html */
+    min-height: 560px;
+    /* ajustează aici dacă vrei mai mare/mic */
+    display: flex;
+    align-items: center;
+    /* centrează conținutul pe verticală */
+    margin-bottom: 0 !important;
+    /* fără spațiu alb dedesubt */
+}
+
+.hero-std>.row {
+    width: 100%;
+}
+
+.hero-std .pt-lg-5,
+.hero-std .mt-lg-5 {
+    /* anulează suplimentele Bootstrap dacă existau */
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+@media (max-width: 576px) {
+    .footer-logo-big {
+        max-height: 72px;
+    }
+}
+
+/* ===== Brand strip (footer) — toate mai mari ===== */
+.footer-brands-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 14px 0;
+    /* bară scundă, dar aerisită */
+    background: transparent;
+}
+
+.footer-brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    /* spațiu între logo-uri */
+    flex-wrap: wrap;
+    line-height: 0;
+    /* elimină spațiul sub imagini */
+}
+
+/* Toate logo-urile — MĂRITE uniform */
+.footer-brand,
+.footer-brand--zor {
+    height: 112px !important;
+    /* ⇦ valoare mărită — arată echilibrat și clar */
+    width: auto;
+    max-width: 280px;
+    /* permite puțin mai multă lățime */
+    object-fit: contain;
+    display: block;
+    transition: transform .25s ease, opacity .25s ease;
+    opacity: .96;
+}
+
+.footer-brand:hover,
+.footer-brand--zor:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+/* Responsive: pe ecrane mici redu puțin */
+@media (max-width: 576px) {
+
+    .footer-brand,
+    .footer-brand--zor {
+        height: 88px !important;
+        max-width: 230px;
+    }
+}
+
+/* ===== Footer: compactare spațiu sub logo-uri ===== */
+
+/* Reduce padding-ul general de jos doar în containerul din footer */
+.site-footer .container.py-5 {
+    padding-bottom: 12px !important;
+    /* înainte era ~3rem */
+}
+
+/* Banda cu branduri: mai puțin padding */
+.footer-brands-row {
+    padding-top: 8px;
+    /* cât vrei vizual */
+    padding-bottom: 6px;
+    /* micșorat ca să apropie de © */
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: transparent;
+}
+
+/* Distanța dintre logo-uri (poți micșora/crește după gust) */
+.footer-brands {
+    gap: 28px;
+    line-height: 0;
+}
+
+/* Logo-urile (las valorile actuale; modifică doar dacă vrei) */
+.footer-brand,
+.footer-brand--zor {
+    height: 112px !important;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Asigură că secțiunea cu © nu adaugă extra spațiu sus */
+.site-footer .footer-bottom,
+.site-footer .copyright,
+.site-footer .copy,
+.site-footer p.copyright {
+    margin-top: 0 !important;
+    padding-top: 8px !important;
+    /* mic, dar suficient să respire */
+}
+
+/* Dacă ai un <p> imediat după banda de branduri, elimină margin-top-ul implicit */
+.footer-brands-row+p {
+    margin-top: 0 !important;
+}
+
+/* ===== Footer compact: fără bară albă, spațiu mai mic sus-jos ===== */
+
+/* 1) Elimină linia albă (border-top) și spațiile implicite ale rândului cu branduri */
+.footer-brands-row {
+    border-top: 0 !important;
+    /* scoate linia albă */
+    border-color: transparent !important;
+    margin-top: 4px !important;
+    /* apropie de conținutul de deasupra */
+    padding-top: 6px;
+    /* mic, doar cât să „respire” */
+    padding-bottom: 6px;
+    /* apropie de © */
+    background: transparent;
+}
+
+/* ===== Footer: spațiu MINIM între coloane și logo-uri ===== */
+
+/* Containerul mare din footer: scoatem padding-ul de jos */
+.site-footer .container.py-5 {
+    padding-bottom: 0 !important;
+}
+
+/* Rândul cu branduri: anulăm margin/padding-ul de sus (anulează și .mt-2/.pt-2 din HTML) */
+.footer-brands-row {
+    margin-top: 0 !important;
+    /* înlocuiește .mt-2 */
+    padding-top: 0 !important;
+    /* înlocuiește .pt-2 */
+    padding-bottom: 6px;
+    /* păstrăm un pic de aer până la © */
+    border-top: 0 !important;
+    /* fără linia albă */
+    background: transparent;
+}
+
+/* Daca rândul de coloane are vreo margine jos, o anulăm */
+.site-footer .container .row.gx-5 {
+    margin-bottom: 0 !important;
+}
+
+/* Bandă branduri: doar pentru siguranță, fără spațiu suplimentar */
+.footer-brands {
+    margin-top: 0 !important;
+    gap: 28px;
+    /* distanța dintre logo-uri (poți micșora dacă vrei) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 0;
+}
+
+/* Dimensiunea logo-urilor (păstrăm ce ai acum) */
+.footer-brand,
+.footer-brand--zor {
+    height: 112px !important;
+    /* ajustează după preferință */
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== Footer — strip branduri: fără linie, spațiu minim ===== */
+
+/* Containerul general din footer: scoatem spațiul de jos */
+.site-footer .container.py-5 {
+    padding-bottom: 0 !important;
+}
+
+/* Anulează utilitarele Bootstrap (mt-2, pt-2, border-top) pe rândul cu branduri */
+.site-footer .footer-brands-row,
+.site-footer .footer-brands-row.mt-2,
+.site-footer .footer-brands-row.pt-2,
+.site-footer .footer-brands-row.border-top,
+.site-footer .footer-brands-row.border-white-10 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 6px !important;
+    /* lasă un pic de aer până la © */
+    border-top: none !important;
+    /* elimină bara albă */
+    background: transparent !important;
+}
+
+/* Dacă rândul de deasupra (coloanele) are spațiu jos, anulează-l */
+.site-footer .container .row.gx-5 {
+    margin-bottom: 0 !important;
+}
+
+/* Strip-ul de branduri */
+.site-footer .footer-brands {
+    margin-top: 0 !important;
+    gap: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    line-height: 0;
+}
+
+/* Dimensiunea logo-urilor (păstrează ce ți-a plăcut) */
+.site-footer .footer-brand,
+.site-footer .footer-brand--zor {
+    height: 112px !important;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== Footer: reduce spațiul de SUS (deasupra logo-ului mare și a coloanelor) ===== */
+
+/* 1) Reduce margin-top adăugat de .mt-5 pe <footer> */
+.site-footer.mt-5 {
+    margin-top: 12px !important;
+    /* pune 0 dacă vrei lipit de secțiunea de sus */
+}
+
+/* 2) Taie padding-ul de sus din containerul footer-ului */
+.site-footer .container.py-5 {
+    padding-top: 8px !important;
+    /* înainte ~48px (py-5) */
+}
+
+/* 3) În stânga, wrapperul cu p-4 avea mult spațiu sus-jos -> îl strângem */
+.site-footer .col-lg-4.col-md-6.ps-0>.d-flex.p-4 {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+/* 4) Titlurile coloanelor: fără extra spațiu deasupra */
+.site-footer .section-title.section-title-sm {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.site-footer h3 {
+    margin-top: 0 !important;
+}
+
+/* 5) Micșorează orice „gap” vertical între rânduri din footer */
+.site-footer .row.gx-5 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    row-gap: 8px;
+    /* poți scădea la 4px dacă vrei și mai strâns */
+}
+
+
+
+/* Logos din bara de branduri -> alb */
+.site-footer .footer-brands img {
+    filter: brightness(0) invert(1);
+    /* face alb orice PNG cu transparență */
+    -webkit-filter: brightness(0) invert(1);
+}
+
+/* Dacă vrei să rămână alb și la hover (fără efect de culoare) */
+.site-footer .footer-brands img:hover {
+    filter: brightness(0) invert(1) opacity(.95);
+}
+
+/* Logo-urile din footer: albe implicit */
+.site-footer .footer-brands img {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+    transition: filter .25s ease, transform .2s ease;
+    /* efect smooth */
+    will-change: filter, transform;
+}
+
+/* La hover/focus: revin la culorile originale */
+.site-footer .footer-brands img:hover,
+.site-footer .footer-brands img:focus-visible {
+    filter: none;
+    -webkit-filter: none;
+    transform: translateY(-2px);
+    /* opțional, mic „lift” pe hover */
+}
+
+/* Preferință de accesibilitate: fără mișcare dacă userul a setat reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .site-footer .footer-brands img {
+        transition: none;
+    }
+}
+
+/* Alb implicit peste inline-style-ul existent */
+.site-footer .col-lg-4.col-md-6.ps-0 .navbar-brand img {
+    filter: brightness(0) invert(1) !important;
+    transition: filter .25s ease, transform .2s ease;
+}
+
+/* Color pe hover */
+.site-footer .col-lg-4.col-md-6.ps-0 .navbar-brand img:hover,
+.site-footer .col-lg-4.col-md-6.ps-0 .navbar-brand img:focus-visible {
+    filter: none !important;
+    transform: translateY(-2px);
+}
+
+.navbar .navbar-brand {
+    line-height: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+
+/* ===== Mărește doar logo-ul din navbar ===== */
+.navbar .brand-logo {
+    height: 90px;
+    /* ← ajustează: 80 / 90 / 100px */
+    width: auto;
+    display: block;
+    /* elimină spațiul alb de sub imagine */
+}
+
+/* aliniază vertical brandul și nu lăsa spațiu jos în bară */
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Responsive: pe ecrane mici redu ușor ca să nu rupă layout-ul */
+@media (max-width: 992px) {
+
+    /* LG breakpoint Bootstrap */
+    .navbar .brand-logo {
+        height: 72px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .brand-logo {
+        height: 60px;
+    }
+}
+
+/* ===== Header stabil: logo mare, meniu fix, panglică jos ===== */
+
+
+
+
+/* Logo: mare, fără „gap” sub imagine */
+.brand-logo {
+    display: block;
+    height: 96px;
+    /* ⇦ mărește aici (ex: 100/110) */
+    width: auto;
+    margin: 0;
+    line-height: 0;
+}
+
+/* Meniul: pe dreapta, un singur rând */
+.navbar-nav {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 22px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* Meniul rămâne deasupra */
+.navbar .navbar-collapse,
+.navbar .navbar-nav {
+    position: relative;
+    z-index: 2;
+}
+
+/* opțional: scoate paddingul stânga al navbar-ului ca să fie chiar la margine */
+.navbar {
+    padding-left: 0 !important;
+}
+
+/* ====== Dimensiuni & aliniere navbar/logo ====== */
+
+/* înălțimea dorită a logo-ului și a barei */
+
+
+/* Navbar – fă textul mai lizibil peste fundal foto */
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;
+    /* bold */
+    letter-spacing: .2px;
+    color: #0b2545 !important;
+    /* contrast bun pe alb */
+    text-shadow:
+        0 0 1px rgba(255, 255, 255, .9),
+        /* mic „glow” alb */
+        0 1px 2px rgba(0, 0, 0, .25);
+    /* umbră fină pt. contur */
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #0b2545 !important;
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 1),
+        0 2px 4px rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: #e62a3f !important;
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 1),
+        0 2px 4px rgba(0, 0, 0, .25);
+}
+
+/* Fundal discret doar când treci cu mouse-ul sau când e activ */
+.navbar .navbar-nav .nav-link {
+    border-radius: 999px;
+    padding: .5rem .9rem;
+    transition: background .2s ease, color .2s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+}
+
+.navbar .navbar-nav .nav-link.active {
+    background: rgba(255, 255, 255, .96);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .10);
+    color: #e62a3f !important;
+}
+
+/* ===== Navbar: pastile albe pentru TOATE link-urile (desktop) ===== */
+@media (min-width: 992px) {
+
+    /* ascund „șina” albă dacă ai folosit-o înainte */
+    .navbar .navbar-nav::before {
+        display: none !important;
+    }
+
+    .navbar .navbar-nav {
+        position: relative;
+        z-index: 3;
+        /* peste logo/panglică */
+        gap: .5rem;
+        /* spațiu între pastile */
+    }
+
+    .navbar .nav-item {
+        position: relative;
+    }
+
+    .navbar .nav-link {
+        display: inline-block;
+        padding: .55rem 1rem;
+        border-radius: 9999px;
+        /* pastilă */
+        background: rgba(255, 255, 255, .95);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+        color: #0b2545 !important;
+        font-weight: 700;
+        line-height: 1;
+        position: relative;
+        /* pentru underline */
+        transition: background .15s ease, box-shadow .15s ease;
+    }
+
+    .navbar .nav-link:hover {
+        background: #fff;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+    }
+
+    /* linia roșie sub link (activ) */
+    .navbar .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        bottom: -10px;
+        /* distanța sub pastilă */
+        height: 3px;
+        background: transparent;
+        border-radius: 3px;
+    }
+
+    .navbar .nav-link.active::after {
+        background: #e62a3f;
+    }
+}
+
+/* ===== Pe mobil: meniu normal, fără pastile/underline ===== */
+@media (max-width: 991.98px) {
+    .navbar .nav-link {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: .5rem 0;
+    }
+
+    .navbar .nav-link::after {
+        display: none;
+    }
+}
+
+
+
+
+
+
+/* schimbă global înălțimea logo-ului/benzii */
+
+.navbar {
+    position: relative;
+    min-height: var(--brandH);
+    padding-left: 0 !important;
+}
+
+
+
+
+
+
+
+/* Pastile albe pentru link-uri (desktop) */
+@media (min-width: 992px) {
+    .navbar .navbar-nav {
+        gap: .5rem;
+    }
+
+    .navbar .nav-link {
+        display: inline-block;
+        padding: .55rem 1rem;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, .95);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+        color: #0b2545 !important;
+        font-weight: 700;
+        line-height: 1;
+        transition: background .15s, box-shadow .15s;
+    }
+
+    .navbar .nav-link:hover {
+        background: #fff;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+    }
+
+    .navbar .nav-link.active {
+        background: rgba(255, 255, 255, .96);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .10);
+        color: #e62a3f !important;
+    }
+}
+
+/* Mobile: simplu, fără pastile */
+@media (max-width: 991.98px) {
+    .navbar .nav-link {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: .5rem 0;
+    }
+}
+
+/* 1) Strânge spațiul SUB carduri */
+.facts {
+    padding-bottom: 0 !important;
+}
+
+/* container-fluid */
+.facts>.container {
+    padding-bottom: 0 !important;
+}
+
+/* containerul interior */
+.facts {
+    margin-bottom: 16px;
+}
+
+/* mic spațiu, poate fi 0-12px */
+
+/* 2) Secțiunea imediat următoare ("De ce noi?") – mai puțin sus */
+.facts+.container-fluid {
+    padding-top: 24px !important;
+}
+
+/* în loc de py-5 */
+.facts+.container-fluid>.container {
+    padding-top: 20px !important;
+}
+
+/* 3) Titlul "De ce noi?" – micșorează pb/mb */
+.facts+.container-fluid .section-title {
+    padding-bottom: .5rem !important;
+    /* pb-2 aproximativ */
+    margin-bottom: 1.5rem !important;
+    /* mb-4 aproximativ */
+}
+
+/* === Compactăm vertical toate secțiunile care folosesc py-5 === */
+/* Taie “dublul” py-5 (container-fluid + container) de pe fiecare bloc */
+.container-fluid.py-5 {
+    padding-top: 2.25rem !important;
+    /* înainte: 3rem */
+    padding-bottom: 2.25rem !important;
+}
+
+.container.py-5 {
+    padding-top: 1.75rem !important;
+    /* înainte: 3rem */
+    padding-bottom: 1.75rem !important;
+}
+
+/* Titlurile de secțiune (au pb-3 mb-5) – mai strâns */
+.section-title {
+    padding-bottom: .75rem !important;
+    /* înainte: ~1rem */
+    margin-bottom: 1.75rem !important;
+    /* înainte: 3rem (mb-5) */
+}
+
+/* Spațiul dintre cardurile “beneficii/servicii” (row g-5) – mai mic */
+.row.g-5 {
+    --bs-gutter-x: 1.75rem;
+    /* înainte: 3rem */
+    --bs-gutter-y: 1.75rem;
+}
+
+/* Sub cardurile .facts, păstrăm doar un aer mic */
+.facts {
+    margin-bottom: 8px;
+}
+
+.facts+.container-fluid {
+    padding-top: 16px !important;
+}
+
+.facts+.container-fluid>.container {
+    padding-top: 12px !important;
+}
+
+/* Centrează underline-ul doar în secțiunea Obiective */
+#obiective-sft .section-title::before,
+#obiective-sft .section-title::after {
+    left: 50% !important;
+    /* mutăm punctul de ancorare în centru */
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    /* anulăm eventualele setări pe right */
+}
+
+
+
+/* ===== Section title — centrare perfectă pentru variantele .text-center ===== */
+.section-title.text-center::before {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* în loc de margin-left:-75px */
+    margin-left: 0 !important;
+}
+
+.section-title.text-center::after {
+    left: 50% !important;
+    margin-left: 0 !important;
+    animation: section-title-run-center-x 5s infinite linear !important;
+    /* animație din centru */
+    will-change: transform;
+}
+
+/* Lățimea barei mari rămâne 150px din definiția de bază — nu o schimbăm */
+@keyframes section-title-run-center-x {
+
+    /* bara mică „aleargă” de la -75px la +75px din centrul titlului */
+    0% {
+        transform: translateX(-75px);
+    }
+
+    50% {
+        transform: translateX(75px);
+    }
+
+    100% {
+        transform: translateX(-75px);
+    }
+}
+
+/* Titluri centrate: linia groasă (statică) rămâne perfect pe mijloc */
+.section-title.text-center::before {
+    left: 50%;
+    transform: translateX(-50%);
+    /* DOAR bara statică folosește transform */
+}
+
+
+@keyframes section-title-run-center {
+    0% {
+        margin-left: -75px;
+    }
+
+    50% {
+        margin-left: 75px;
+    }
+
+    100% {
+        margin-left: -75px;
+    }
+}
+
+.carousel-item {
+    background-color: transparent !important;
+}
+
+/* === FACTS — un singur set (spațiu mic sub carduri + start secțiune următoare) === */
+.facts {
+    padding-bottom: 0 !important;
+}
+
+.facts>.container {
+    padding-bottom: 0 !important;
+}
+
+.facts {
+    margin-bottom: 16px;
+}
+
+.facts+.container-fluid {
+    padding-top: 24px !important;
+}
+
+.facts+.container-fluid>.container {
+    padding-top: 20px !important;
+}
+
+.facts+.container-fluid .section-title {
+    padding-bottom: .5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* === SECTION TITLE — linie groasă centrată + linie mică animată din centru === */
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background: var(--primary);
+    animation: section-title-run-center 5s linear infinite;
+}
+
+@keyframes section-title-run-center {
+    0% {
+        margin-left: -75px;
+    }
+
+    50% {
+        margin-left: 75px;
+    }
+
+    100% {
+        margin-left: -75px;
+    }
+}
+
+/* === HERO — o singură înălțime pentru item și slide + video cover === */
+#header-carousel .carousel-item,
+#header-carousel .video-slide {
+    height: 65vh;
+    max-height: 720px;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#header-carousel .bg-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 72%;
+    line-height: 0;
+}
+
+.carousel-item {
+    background-color: transparent !important;
+}
+
+/* fără bandă neagră */
+/* NAVBAR ca inainte: logo mai mic, bara cu padding normal, fara absolute pe brand */
+.navbar {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    min-height: auto;
+    /* nu mai fortam inaltimea cu --brandH */
+}
+
+.navbar .navbar-brand {
+    position: relative;
+    /* readus in flux */
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.navbar .navbar-brand .brand-logo {
+    height: 72px;
+    /* ⇦ ajusteaza: 56–64px dupa cum arata mai bine */
+    width: auto;
+    display: block;
+}
+
+/* responsive: pe ecrane mici, si mai mic */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand .brand-logo {
+        height: 48px;
+    }
+}
+
+/* 1) Logo puțin mai mare (desktop) */
+.navbar .navbar-brand .brand-logo {
+    height: 84px;
+    /* ajustează 80–90px după gust */
+    width: auto;
+    display: block;
+}
+
+/* 2) Stratul (z-index): pastilele peste logo și peste panglica roz */
+.navbar {
+    position: relative;
+    z-index: 10;
+    /* navbar în fața elementelor din spate (panglica) */
+}
+
+/* logo-ul mai jos în stiva de straturi */
+.navbar .navbar-brand {
+    position: relative;
+    z-index: 1;
+}
+
+/* pastilele/meniul mai sus decât logo-ul */
+.navbar .navbar-collapse,
+.navbar .navbar-nav {
+    position: relative;
+    z-index: 3;
+}
+
+/* 3) Dacă panglica are o clasă dedicată, fă-o sigur sub navbar */
+.brand-ribbon,
+.panglica,
+.header-ribbon {
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
+    /* opțional: nu fură click-urile */
+}
+
+/* (opțional) pe ecrane mici, logo-ul un pic mai mic */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand .brand-logo {
+        height: 60px;
+    }
+}
+
+/* === LOGO și panglică sub butoane === */
+
+/* Logo-ul — mărime și poziționare */
+.navbar .navbar-brand img {
+    height: 80px;
+    /* ajustează după preferință (ex: 85px dacă vrei mai mare) */
+    width: auto;
+    position: relative;
+    z-index: 1;
+    /* sub butoane */
+}
+
+/* Panglica roz — sub logo și sub butoane */
+.header-ribbon,
+.panglica,
+.brand-ribbon {
+    position: relative;
+    z-index: 0;
+}
+
+/* Navbar-ul și butoanele — deasupra logo-ului și panglicii */
+.navbar {
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .navbar-collapse,
+.navbar .navbar-nav,
+.navbar .nav-item,
+.navbar .nav-link {
+    position: relative;
+    z-index: 20;
+    /* cel mai sus */
+}
+
+/* Centrare mai precisă dacă era împins spre dreapta */
+.navbar .navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== NAVBAR: meniul peste logo + panglică, logo scos din flux ===== */
+.navbar {
+    position: relative;
+    z-index: 10;
+    /* tot navbar-ul peste panglică */
+}
+
+/* Logo-ul: scos din flux, poziționat la stânga, sub pastile */
+.navbar .navbar-brand {
+    position: absolute;
+    /* <- cheie: nu mai împinge meniul */
+    left: 12px;
+    top: 8px;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0;
+    z-index: 1;
+    /* sub pastile */
+}
+
+.navbar .navbar-brand .brand-logo,
+.navbar .navbar-brand img {
+    height: 86px;
+    /* mărește cât vrei: 80–90px */
+    width: auto;
+    display: block;
+}
+
+/* Meniul/pastilele: deasupra logo-ului */
+.navbar .navbar-collapse,
+.navbar .navbar-nav,
+.navbar .nav-item,
+.navbar .nav-link {
+    position: relative;
+    z-index: 5;
+    /* peste logo */
+}
+
+/* Centrează meniul; iar navbarul primește padding stânga cât lățimea logo-ului,
+   ca să nu se suprapună text peste logo dacă nu vrei */
+@media (min-width: 992px) {
+    .navbar {
+        padding-left: 180px;
+    }
+
+    /* ≈ lățimea logo-ului; ajustează 160–200px */
+    .navbar .navbar-collapse {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Pe mobil: revenim la flux normal (meniul hamburger) */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding-left: 0;
+    }
+
+    .navbar .navbar-brand {
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+    .navbar .navbar-brand .brand-logo,
+    .navbar .navbar-brand img {
+        height: 60px;
+    }
+}
+
+/* Panglica/logo-ul de fundal (dacă e pe alt element) stă sub navbar */
+.header-ribbon,
+.panglica,
+.brand-ribbon,
+.header-ribbon img,
+.panglica img,
+.brand-ribbon img {
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
+    /* să nu “fure” click-urile */
+}
+
+/* reset: nu mai forța absolute/padding pe navbar/brand */
+.navbar {
+    padding-left: 0 !important;
+}
+
+.navbar .navbar-brand {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0;
+}
+
+/* navbar deasupra png-ului cu panglica+logo */
+.navbar {
+    position: relative;
+    z-index: 1000;
+    /* mare, clar peste */
+}
+
+/* pastilele și containerul lor – încă un pas peste */
+.navbar .navbar-collapse,
+.navbar .navbar-nav,
+.navbar .nav-item,
+.navbar .nav-link {
+    position: relative;
+    z-index: 1001;
+}
+
+/* imaginea cu panglica+logo – clar sub navbar */
+.header-ribbon,
+.panglica,
+.brand-ribbon,
+.header-ribbon img,
+.panglica img,
+.brand-ribbon img {
+    position: relative;
+    z-index: 0 !important;
+    pointer-events: none;
+    /* să nu “fure” click-urile */
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-collapse {
+        display: flex;
+        justify-content: center;
+        /* meniu centrat */
+    }
+}
+
+/* === NAV: meniu peste logo/panglică, logo scos din flux === */
+.container-fluid.p-0>nav.navbar {
+    position: relative;
+    /* context pt. absolutul de mai jos */
+    z-index: 10;
+    /* meniul deasupra oricăror imagini din header */
+}
+
+.navbar .navbar-brand {
+    position: absolute;
+    /* scoate <a> (logo) din flux, nu mai împinge meniul */
+    left: 0;
+    top: -6px;
+    /* ajustează vertical (0…-10px după gust) */
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    z-index: 0;
+    /* sub pastilele de meniu */
+}
+
+.navbar .navbar-brand .brand-logo {
+    height: 88px;
+    /* cât vrei logo-ul (80–96px) */
+    width: auto;
+    display: block;
+    pointer-events: none;
+    /* ca pastilele meniului deasupra să fie clicabile */
+}
+
+.navbar .navbar-collapse,
+.navbar .navbar-nav {
+    position: relative;
+    z-index: 2;
+    /* meniul peste imagine */
+}
+
+/* pe mobil meniu normal, logo revine în flux */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand {
+        position: static;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 60px;
+        pointer-events: auto;
+    }
+}
+
+/* ===== Navbar: logo + panglică pe fundal, meniul peste ===== */
+.container-fluid>nav.navbar {
+    position: relative;
+    /* context pt. poziționarea absolută a PNG-ului */
+    min-height: 96px;
+    /* înălțimea barei cât logo-ul */
+}
+
+/* ancora de brand devine o cutie fixă în stânga */
+.navbar .navbar-brand {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    /* aria clicabilă doar pe stânga, ajustează la nevoie */
+    height: 96px;
+    z-index: 1;
+    /* sub meniu, peste fundalul alb */
+    display: block;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* PNG-ul mare (logo + panglică) nu mai ocupă spațiu în layout */
+.navbar .navbar-brand .brand-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 96px;
+    width: auto;
+    pointer-events: none;
+    /* click-ul se face pe ancoră, nu pe imagine */
+}
+
+/* Meniul rămâne peste panglică și nu e împins de PNG */
+.navbar .navbar-collapse,
+.navbar .navbar-nav {
+    position: relative;
+    z-index: 2;
+    /* peste imagine */
+}
+
+/* pe ecrane mici, micșorăm consistent */
+@media (max-width: 991.98px) {
+    .container-fluid>nav.navbar {
+        min-height: 72px;
+    }
+
+    .navbar .navbar-brand {
+        height: 72px;
+        width: 210px;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 72px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid>nav.navbar {
+        min-height: 60px;
+    }
+
+    .navbar .navbar-brand {
+        height: 60px;
+        width: 190px;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 60px;
+    }
+}
+
+/* ===== NAVBAR ===== */
+.container-fluid>nav.navbar {
+    position: relative;
+    min-height: 120px;
+    /* destul loc pentru logo + panglică */
+    z-index: 2;
+}
+
+/* LOGO + PANGLICĂ ROZ (fundal, sub meniu) */
+.navbar .navbar-brand {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* ⬅️ poziționare dedesubt, nu sus */
+    transform: none;
+    z-index: 0;
+    /* sub meniu */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navbar-brand .brand-logo {
+    position: relative;
+    height: 100px;
+    /* ajustează în funcție de imagine */
+    width: auto;
+    display: block;
+}
+
+/* Meniul deasupra panglicii */
+.navbar .navbar-collapse,
+.navbar .navbar-nav {
+    position: relative;
+    z-index: 5;
+    /* peste logo și panglică */
+}
+
+/* Ajustăm ușor distanțele */
+.navbar-nav .nav-item .nav-link {
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+}
+
+/* Responsivitate */
+@media (max-width: 991.98px) {
+    .container-fluid>nav.navbar {
+        min-height: 90px;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid>nav.navbar {
+        min-height: 70px;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 60px;
+    }
+}
+
+/* Language buttons */
+.lang-btn {
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-weight: 600;
+    line-height: 1;
+    transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.85);
+    color: #0b2742;
+    /* albastrul navbarului */
+}
+
+.lang-btn.active {
+    background: #ffffff;
+    /* RO plin */
+    color: #0b2742;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.lang-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* === HERO: înălțime unificată pentru toate slide-urile === */
+#header-carousel .carousel-item,
+#header-carousel .video-slide {
+    height: 65vh !important;
+    /* alege 62–68vh după gust */
+    max-height: 720px !important;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Videoclipul ocupă complet cadrul slide-ului */
+#header-carousel .bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 72%;
+    display: block;
+    line-height: 0;
+}
+
+/* Fundal complet transparent (fără benzi) */
+#header-carousel .carousel-item {
+    background: transparent !important;
+}
+
+/* Hero deasupra fundalului, dar sub carduri */
+#header-carousel {
+    position: relative;
+    z-index: 1;
+}
+
+/* Secțiunea cu carduri vine peste hero */
+.over-hero {
+    position: relative;
+    z-index: 5;
+    margin-top: -110px;
+}
+
+/* opțional – umbră mai plină pe carduri */
+.over-hero .bg-primary,
+.over-hero .bg-light {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+    border: 0;
+    border-radius: 16px;
+}
+
+/* Responsive – ajustează cât urcă peste hero */
+@media (min-width: 1400px) {
+    .over-hero {
+        margin-top: -140px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .over-hero {
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .over-hero {
+        margin-top: -90px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .over-hero {
+        margin-top: -70px;
+    }
+}
+
+/* meniul să fie peste tot */
+.navbar .navbar-collapse {
+    z-index: 1000;
+}
+
+/* mobil & tablete: brand-ul revine în flux, hamburger vizibil */
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        z-index: 1;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        position: static;
+        height: 56px;
+        /* ajustează la nevoie */
+        width: auto;
+    }
+
+    /* când se deschide, meniul are fundal alb ca să nu se vadă video sub el */
+    .navbar .navbar-collapse.collapse.show {
+        background: #ffffff;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    }
+
+    /* link-urile mai aerisite pe mobil */
+    .navbar-nav .nav-link {
+        padding: .6rem 0;
+        font-size: 1.05rem;
+    }
+}
+
+/* ===== Fix navbar pe mobil: afișează DOAR hamburger-ul ===== */
+@media (max-width: 991.98px) {
+
+    /* implicit: ascuns */
+    .navbar .navbar-collapse {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        /* panou full-width sub bară */
+        background: #ffffff;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        z-index: 1000;
+    }
+
+    /* când Bootstrap adaugă .show -> arată panoul */
+    .navbar .navbar-collapse.show {
+        display: block !important;
+    }
+
+    .navbar .navbar-nav {
+        gap: 0;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        border-left-width: 0;
+    }
+
+    .navbar .navbar-nav>li:first-child>.nav-link {
+        border-left-width: 1px;
+    }
+
+
+
+    .navbar .nav-link {
+        padding: .6rem 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    /* brand-ul revine în flux ca să nu se suprapună */
+    .navbar .navbar-brand {
+        position: static;
+        transform: none;
+    }
+}
+
+/* Doar hamburger pe mobil (meniul apare doar când e .show) */
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        z-index: 1000;
+    }
+
+    .navbar .navbar-collapse.show {
+        display: block !important;
+    }
+
+    /* brand-ul revine în flux, imaginea mai mică */
+    .navbar .navbar-brand {
+        position: static;
+        transform: none;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 56px;
+        width: auto;
+    }
+
+    .navbar-nav .nav-link {
+        padding: .6rem 0;
+        font-size: 1.05rem;
+    }
+}
+
+/* ====== 1) NAVBAR pe mobil: curat, compact ====== */
+@media (max-width: 991.98px) {
+
+    /* hamburger + panou */
+    .navbar .navbar-collapse {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        z-index: 1000;
+    }
+
+    .navbar .navbar-collapse.show {
+        display: block !important;
+    }
+
+    /* logo + panglica mai mici, fără să împingă layout-ul */
+    .navbar .navbar-brand {
+        position: static;
+        transform: none;
+    }
+
+    .navbar .navbar-brand .brand-logo {
+        height: 44px;
+        width: auto;
+    }
+
+    .navbar-nav .nav-link {
+        padding: .6rem 0;
+        font-size: 1.05rem;
+    }
+}
+
+/* ====== 2) HERO video: înălțime și text scalabile ====== */
+#header-carousel .bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#header-carousel .carousel-item,
+#header-carousel .video-slide {
+    height: 62vh;
+    max-height: 720px;
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+
+    #header-carousel .carousel-item,
+    #header-carousel .video-slide {
+        height: 56vh !important;
+        max-height: 520px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    #header-carousel .carousel-item,
+    #header-carousel .video-slide {
+        height: 50vh !important;
+        max-height: 440px !important;
+    }
+}
+
+/* Titlurile din hero să se scaleze frumos (fără să iasă din ecran) */
+#header-carousel .carousel-caption h5 {
+    font-size: clamp(0.9rem, 1.6vw + .6rem, 1.25rem);
+    letter-spacing: .04em;
+}
+
+#header-carousel .carousel-caption h1 {
+    font-size: clamp(1.6rem, 5.2vw + .6rem, 4rem);
+    line-height: 1.1;
+}
+
+/* ====== 3) Cardurile „facts”: layout perfect pe telefon ====== */
+/* pe mobile NU mai suprapunem peste hero; pe desktop rămâne overlap-ul */
+.over-hero {
+    position: relative;
+    z-index: 5;
+    margin-top: -110px;
+}
+
+@media (max-width: 991.98px) {
+    .over-hero {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .over-hero {
+        margin-top: 0;
+    }
+}
+
+/* carduri full-width, spațiu între ele, paddings mai mici pe mobil */
+.facts .row {
+    row-gap: 16px;
+}
+
+@media (max-width: 575.98px) {
+    .facts .p-5 {
+        padding: 1.25rem !important;
+    }
+
+    .facts .bg-primary,
+    .facts .bg-light {
+        border-radius: 12px;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, .14);
+    }
+}
+
+/* ====== 4) Igienă generală pe mobil ====== */
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* elimină scroll-ul orizontal */
+/* ===== Logo & navbar pe mobil: centrat pe verticală, mai jos, compact ===== */
+@media (max-width: 991.98px) {
+
+    /* bara de navigare să aibă înălțime clară și conținut centrat */
+    nav.navbar {
+        min-height: 64px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* brand = un „cadru” cu înălțime fixă, fără să împingă layout-ul */
+    .navbar .navbar-brand {
+        position: relative;
+        /* devenim context pt. imagine */
+        height: 64px;
+        /* înălțimea vizibilă pe mobil */
+        overflow: hidden;
+        /* tăiem partea superioară dacă e cazul */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        /* safety: centrare conținut */
+    }
+
+    /* imaginea (logo + panglică) lipită de partea de JOS a cadrului brand */
+    .navbar .navbar-brand .brand-logo {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        /* ⬅️ aduce logo-ul mai jos, lângă panglică */
+        height: auto;
+        width: auto;
+        max-height: none;
+        transform: none;
+    }
+
+    /* hamburger vizibil, meniu ascuns până la .show */
+    .navbar .navbar-collapse {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: .75rem 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        z-index: 1000;
+    }
+
+    .navbar .navbar-collapse.show {
+        display: block !important;
+    }
+}
+
+/* ===== FIX: logo vizibil pe mobil ===== */
+@media (max-width: 991.98px) {
+
+    /* Bara compactă, dar fără să ascundă logo-ul */
+    nav.navbar {
+        min-height: 64px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        align-items: center;
+    }
+
+    /* Brand-ul revine în flux (NU absolut), fără overflow hidden */
+    .navbar .navbar-brand {
+        position: static !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Imaginea logo: poziție normală, înălțime controlată */
+    .navbar .navbar-brand img,
+    .navbar .navbar-brand .brand-logo {
+        position: static !important;
+        height: 48px !important;
+        /* ajustează 44–56px dacă vrei */
+        width: auto !important;
+        display: block;
+    }
+
+    /* Meniul rămâne tip „hamburger” */
+    .navbar .navbar-collapse {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: .75rem 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        z-index: 1000;
+    }
+
+    .navbar .navbar-collapse.show {
+        display: block !important;
+    }
+}
+
+/* Fix: anulează underline-ul vechi pe ::before (desktop) */
+@media (min-width: 992px) {
+    .navbar-dark .navbar-nav .nav-link::before {
+        content: none !important;
+        /* oprește complet pseudo-elementul */
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        content: none !important;
+    }
+}
+
+/* Nudge doar pe conținut, overlay-ul rămâne full */
+#header-carousel .carousel-caption .p-3 {
+    transform: translateY(-6%);
+}
+
+@media (max-width: 991.98px) {
+    #header-carousel .carousel-caption .p-3 {
+        transform: none;
+    }
+}
+
+/* EN Home – ridică ușor textul DOAR pe slide-ul 2 */
+#header-carousel .carousel-item:nth-child(2) .carousel-caption .p-3 {
+    transform: translateY(-6%);
+}
+
+@media (max-width: 991.98px) {
+    #header-carousel .carousel-item:nth-child(2) .carousel-caption .p-3 {
+        transform: none;
+    }
+}
+
+/* Paletă – aceeași cu topbar-ul */
+:root {
+    --brand-navy: #0b1e3e;
+    /* baza (bleumarinul din topbar) */
+    --brand-navy-hover: #112a53;
+    /* hover: un pic mai deschis */
+    --brand-navy-active: #091730;
+    /* active: ușor mai închis */
+}
+
+/* ===== Navbar links: dreptunghiuri bleumarin cu text alb ===== */
+.navbar .navbar-nav .nav-link {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: var(--brand-navy) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, .20);
+    padding: .7rem 1.2rem;
+    line-height: 1.2;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    background: var(--brand-navy-hover) !important;
+    border-color: rgba(255, 255, 255, .35);
+}
+
+/* Active: păstrăm underline-ul roșu existent */
+.navbar .navbar-nav .nav-link.active {
+    background: var(--brand-navy-active) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, .35);
+    border-bottom-color: transparent;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Distanța dintre butoane – pune 0 dacă le vrei lipite */
+.navbar .navbar-nav {
+    gap: 10px;
+}
+
+/* ===== Language switch (RO / EN) – același stil ===== */
+.navbar .lang-switch .btn {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: var(--brand-navy) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, .20);
+    padding: .6rem 1rem;
+}
+
+.navbar .lang-switch .btn:hover,
+.navbar .lang-switch .btn:focus {
+    background: var(--brand-navy-hover) !important;
+    border-color: rgba(255, 255, 255, .35);
+}
+
+/* ===== NAV – plăci lipite, fără spații între butoane ===== */
+
+/* înălțime controlată a navbarului (opțional, ajustează 72–86px) */
+.navbar {
+    --nav-h: 78px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-brand {
+    margin-right: 0;
+    min-height: var(--nav-h);
+    display: flex;
+    align-items: center;
+}
+
+/* 1) Fără gap între item-uri */
+.navbar .navbar-collapse {
+    align-items: stretch !important;
+}
+
+.navbar .navbar-nav {
+    gap: 0 !important;
+    /* elimină spațiile */
+    align-items: stretch !important;
+    /* întinde pe înălțime */
+}
+
+.navbar .navbar-nav>li {
+    margin: 0 !important;
+}
+
+/* 2) Butoanele – se lipesc, ocupă toată înălțimea, cu separator fin */
+.navbar .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--nav-h);
+    padding: 0 22px;
+    /* doar orizontal */
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    /* păstrăm culorile tale actuale */
+    background: inherit !important;
+    /* rămâne nuanța existentă */
+    color: inherit !important;
+
+    /* separatoare ca în exemplu (linie subțire între plăci) */
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid rgba(255, 255, 255, .25);
+    /* ajustează opacitatea după fondul tău */
+    white-space: nowrap;
+}
+
+/* prima placă are și muchie stângă, ca să „închidem” banda */
+.navbar .navbar-nav>li:first-child>.nav-link {
+    border-left-width: 1px;
+}
+
+/* 3) RO / EN – lipite de restul */
+.navbar .lang-switch {
+    display: flex;
+    align-items: stretch;
+}
+
+.navbar .lang-switch .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--nav-h);
+    padding: 0 16px;
+    border-radius: 0 !important;
+    margin: 0 !important;
+
+    /* păstrează culorile tale actuale */
+    background: inherit !important;
+    color: inherit !important;
+
+    /* separatoare identice */
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: none !important;
+}
+
+/* ===== Hover/active – doar nuanțe, fără să creeze „goluri” ===== */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .lang-switch .btn:hover {
+    filter: brightness(1.08);
+}
+
+.navbar .navbar-nav .nav-link.active {
+    filter: brightness(0.92);
+    border-bottom-color: transparent;
+    /* dacă ai underline separat */
+}
+
+/* ===== Mobile: revenim la listă aerisită ca să nu se înghesuie ===== */
+@media (max-width: 991.98px) {
+    .navbar {
+        --nav-h: 60px;
+    }
+
+    .navbar .navbar-nav .nav-link,
+    .navbar .lang-switch .btn {
+        width: 100%;
+        min-height: 48px;
+        padding: .7rem 1rem;
+        border: 1px solid rgba(255, 255, 255, .25);
+        /* contur complet pe rând */
+        margin: 4px 0 !important;
+    }
+}
+
+/* ===== NAV – plăci lipite, fundal ALB, text bleumarin ===== */
+:root {
+    --brand-navy: #0b1e3e;
+}
+
+/* înălțimea navbarului (ajustează dacă vrei) */
+.navbar {
+    --nav-h: 78px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-brand {
+    margin-right: 0;
+    min-height: var(--nav-h);
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-collapse {
+    align-items: stretch !important;
+}
+
+.navbar .navbar-nav {
+    gap: 0 !important;
+    /* fără spațiu între butoane */
+    align-items: stretch !important;
+    /* full height */
+}
+
+.navbar .navbar-nav>li {
+    margin: 0 !important;
+}
+
+/* butoane: ALB + text bleumarin, separatoare subtile */
+.navbar .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--nav-h);
+    padding: 0 22px;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    background: #fff !important;
+    color: var(--brand-navy) !important;
+
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid rgba(0, 0, 0, .12);
+    /* separator între plăci */
+    white-space: nowrap;
+}
+
+.navbar .navbar-nav>li:first-child>.nav-link {
+    border-left-width: 1px;
+    /* margine stânga pentru prima placă */
+}
+
+/* hover/active nu creează „găuri” */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    background: #f6f7f9 !important;
+    border-left-color: rgba(0, 0, 0, .18);
+}
+
+.navbar .navbar-nav .nav-link.active {
+    background: #eef1f6 !important;
+    /* activ ușor evidențiat */
+    border-bottom-color: transparent;
+    /* dacă ai underline roșu separat */
+}
+
+/* RO / EN la fel ca butoanele */
+.navbar .lang-switch {
+    display: flex;
+    align-items: stretch;
+}
+
+.navbar .lang-switch .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--nav-h);
+    padding: 0 16px;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+    color: var(--brand-navy) !important;
+
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid rgba(0, 0, 0, .12);
+    box-shadow: none !important;
+}
+
+.navbar .lang-switch .btn:hover {
+    background: #f6f7f9 !important;
+    border-left-color: rgba(0, 0, 0, .18);
+}
+
+/* mobil: listă aerisită */
+@media (max-width: 991.98px) {
+    .navbar {
+        --nav-h: 60px;
+    }
+
+    .navbar .navbar-nav .nav-link,
+    .navbar .lang-switch .btn {
+        width: 100%;
+        min-height: 48px;
+        padding: .7rem 1rem;
+        border: 1px solid rgba(0, 0, 0, .12);
+        margin: 4px 0 !important;
+    }
+}
+
+/* ===== NAV: butoane lipite, tot grupul lipit de marginea dreaptă ===== */
+
+/* 1) Fără spațiu între item-uri și full-height pe navbar */
+.navbar .navbar-collapse {
+    align-items: stretch !important;
+}
+
+.navbar .navbar-nav {
+    gap: 0 !important;
+    align-items: stretch !important;
+}
+
+/* 2) Butoanele: fără margini, lipite, separatoare fine între ele */
+.navbar .navbar-nav .nav-link {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid rgba(0, 0, 0, .12);
+    /* separator discret (schimbă cu alb dacă ai fundal închis) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--nav-h, 78px);
+    padding: 0 22px;
+    white-space: nowrap;
+}
+
+.navbar .navbar-nav>li:first-child>.nav-link {
+    border-left-width: 1px;
+    /* marginea din stânga pentru primul */
+}
+
+/* 3) RO/EN lipite între ele și de restul butoanelor */
+.navbar .lang-switch {
+    display: flex;
+    align-items: stretch;
+    gap: 0 !important;
+    /* fără spațiu între RO și EN */
+}
+
+.navbar .lang-switch .btn {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--nav-h, 78px);
+    padding: 0 16px;
+
+    /* același stil ca nav-link-urile */
+    background: #fff !important;
+    /* sau inherit dacă folosești alt fundal */
+    color: var(--brand-navy, #0b1e3e) !important;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 1px solid rgba(0, 0, 0, .12);
+}
+
+/* 4) Împinge tot grupul de butoane la dreapta, lipit de margine */
+.navbar .navbar-nav.ms-auto {
+    margin-right: 0 !important;
+}
+
+/* asigurare */
+@media (min-width: 992px) {
+    .navbar {
+        padding-right: 0 !important;
+    }
+
+    /* pe desktop, chiar lipit de margine */
+}
