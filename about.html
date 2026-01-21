@@ -113,15 +113,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Servicii</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Noutăți</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 
                     <!-- RO/EN intră și ele în meniu pe mobil -->
                     <li class="nav-item ms-lg-3">
                         <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
-                            <a class="btn btn-sm btn-light text-dark px-2" href="about.html" aria-label="Română"
-                                aria-current="true">RO</a>
-                            <a class="btn btn-sm btn-dark text-white px-2" href="about_engleza.html"
-                                aria-label="English">EN</a>
+                            <a class="btn btn-sm btn-light text-dark px-2" href="#"
+                                onclick="setLang('ro'); return false;" aria-label="Română">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="#"
+                                onclick="setLang('en'); return false;" aria-label="English">EN</a>
+
                         </div>
                     </li>
                 </ul>
@@ -141,6 +142,11 @@
             <div class="col-12 text-center">
 
                 <h1 class="display-4 text-white animated zoomIn">Despre noi</h1>
+
+                <!-- Motto (adăugat, fără a schimba structura paginii) -->
+                <p class="lead text-white mt-2 mb-0">
+                    A fost odată… este… și va fi… atâta timp cât veți avea încredere în Fabrica de Timbre!
+                </p>
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center mb-0">
@@ -190,16 +196,73 @@
                         <h1 class="mb-0">Fabrica de Timbre – din 1872, tipar de patrimoniu pentru România</h1>
                     </div>
 
+                    <!-- ISTORIE COMPLETĂ (înlocuită integral, păstrând structura) -->
                     <p class="mb-4" style="text-align:justify;">
-                        Istoria Fabricii de Timbre începe la <strong>29 februarie 1872</strong>, odată cu Legea
-                        timbrului și a înregistrării.
-                        În același an ia naștere în Ministerul Finanțelor <em>Serviciul de Confecționare, Conservare și
-                            Distribuție a Timbrelor</em> – nucleul actualei Fabrici. Primele utilaje au fost patru prese
-                        de mână aduse de la Viena, iar din 1876 am tipărit și mărci poștale pe baza clișeelor galvanice
-                        realizate la Paris. De atunci, am imprimat timbre fiscale și poștale, coli încrustate, polițe,
-                        mandate, cărți poștale (interne din 1873, externe din 1879) și numeroase efecte cu trăsături de
-                        securitate.
+                        A fost odată… și acest „odată” începe la <strong>29 februarie 1872</strong>, momentul în care a
+                        fost adoptată <strong>Legea timbrului și a înregistrării</strong>, act normativ prin care se
+                        reglementa folosirea timbrelor fiscale în România. Ministerul de Finanțe, care dorea imprimarea
+                        în țară a timbrelor necesare Direcției Generale a Poștelor, poartă discuții cu autoritățile
+                        franceze care tipăreau mărcile poștale românești cu efigia Regelui Carol I, precum și primele
+                        timbre fiscale autohtone. La scurt timp, în același an, se înființează în cadrul Ministerului
+                        Finanțelor <em>Serviciul de Confecționare, Conservare și Distribuție a Timbrelor</em> – nucleul
+                        actualei Fabrici de Timbre.
                     </p>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        La început, fabrica era dotată cu <strong>patru prese tipografice de mână</strong> aduse de la
+                        Viena. De-abia la patru ani de la înființare, atelierul a început să imprime și <strong>mărci
+                            poștale</strong> cu ajutorul <strong>clișeelor galvanice</strong> aduse de la Paris,
+                        folosite
+                        de francezi la gravarea timbrelor cu Regele Carol I. Primele lucrări realizate la Fabrica de
+                        Timbre au fost în anul <strong>1872</strong>: <strong>colile încrustate</strong> și
+                        <strong>polițele</strong>.
+                    </p>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        Din <strong>1875</strong>, tipografia imprimă timbre fiscale în două culori: chenarul, textul și
+                        stema țării în negru, iar fondul de siguranță în culori diferite, caracteristice fiecărei
+                        valori,
+                        iar un an mai târziu sunt tipărite și uzuale. Din <strong>1873</strong>, Fabrica de Timbre a
+                        executat <strong>cărți poștale deschise</strong> pentru interiorul țării, iar din
+                        <strong>1879</strong> și pentru exterior. Începând cu <strong>1890</strong>, apar
+                        <strong>mandatele poștale</strong> interne, apoi cele externe, ceea ce a consolidat rolul
+                        fabricii
+                        în infrastructura administrativă și poștală a României.
+                    </p>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        Activitatea Fabricii de Timbre s-a extins constant: apar timbrele pentru
+                        <strong>Camerele de Comerț (1882)</strong>, <strong>timbrele statistice (1919)</strong>,
+                        <strong>timbrele de monopol</strong> (precum cele pentru tutun), <strong>timbrele consulare
+                            (1921)</strong>, dar și <strong>timbrele de raport și asistență socială (1915)</strong>.
+                        Începând cu <strong>1907</strong>, Fabrica de Timbre cunoaște o dezvoltare amplă pentru acea
+                        vreme, fiind sprijinită în achiziționarea de noi utilaje și implementarea noilor proceduri de
+                        tipărire apărute în epocă.
+                    </p>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        Una dintre cele mai frumoase emisiuni de timbre fiscale românești a văzut lumina tiparului în
+                        <strong>1911</strong>. Timbrul îl reprezenta pe <strong>Carol I</strong>, iar clișeele folosite
+                        au fost aduse din străinătate. Aceste timbre au circulat până la sfârșitul anului
+                        <strong>1919</strong>. Începând cu <strong>1927</strong>, lucrările încep să fie apărate
+                        împotriva
+                        falsificării datorită tehnicii performante folosite. Tot în acest an apare emisiunea de timbre
+                        fiscale imprimate în <strong>heliogravură</strong>, cu efigia Regelui Ferdinand. Din
+                        <strong>1929</strong> apar timbrele poștale oficiale folosite pentru francarea corespondenței.
+                    </p>
+
+                    <p class="mb-4" style="text-align:justify;">
+                        <strong>Prima emisiune de timbre fiscale realizată în totalitate</strong> în Fabrica de Timbre a
+                        fost lansată în <strong>1932</strong>, cu efigia <strong>Regelui Carol al II-lea</strong>.
+                        Astăzi, Fabrica de Timbre coroborează experiența acumulată în arta tiparului cu dinamismul noii
+                        generații și tehnologia de primă clasă, pentru a oferi soluții adaptate și de încredere nevoilor
+                        de comunicare ale clienților – de la suportul digital la distribuire.
+                    </p>
+
+                    <p class="fw-bold text-primary mb-4">
+                        Este… și va fi… atâta timp cât veți avea încredere în Fabrica de Timbre!
+                    </p>
+                    <!-- /ISTORIE COMPLETĂ -->
 
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6">
@@ -216,17 +279,6 @@
                         </div>
                     </div>
 
-                    <p class="mb-4" style="text-align:justify;">
-                        Din 1907 am trecut prin valuri succesive de modernizare; în 1911 apare una dintre cele mai
-                        apreciate emisiuni de timbre fiscale (Carol I), iar din 1927 introducem tehnici performante de
-                        protecție. Astăzi suntem o tipografie unicat în România: operăm toate cele trei tipuri de tipar,
-                        realizăm policromie offset (cataloage, afișe, etichete, autocolante, calendare, cărți, reviste),
-                        precum și personalizare pe plicuri, perfor, numerotare. Retehnologizările recente (tipar digital
-                        de mare viteză, linie de împlicuire, fluxuri integrate) ne permit să livrăm rapid, sigur și
-                        trasabil. <strong>Misiunea noastră</strong> este să rămânem furnizorul preferat de produse și
-                        servicii tipografice, prin calitate, promptitudine și soluții adaptate fiecărui client.
-                    </p>
-
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded"
                             style="width: 60px; height: 60px;">
@@ -242,7 +294,7 @@
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100 rounded"
-                            src="img/183999263_5573167752725931_541327193682137512_n.jpg" style="object-fit:cover;"
+                            src="img/site-Fabrica-de-Timbre---Istorie.jpg" style=" object-fit:cover;"
                             decoding="async" />
 
                     </div>
@@ -254,6 +306,7 @@
 
     <!-- Tradiție & Tehnologie din 1872 (înlocuiește „Echipa”) -->
     <section class="container py-5">
+
         <div class="text-center mb-5">
             <span class="text-primary fw-bold text-uppercase">Despre noi</span>
             <h2 class="display-6 fw-bold mt-2">Tradiție & tehnologie din 1872</h2>
@@ -263,56 +316,73 @@
         <!-- Tiles capabilități -->
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-                <div class="h-100 p-4 border rounded-3">
-                    <div class="mb-2 small text-uppercase text-primary fw-bold">Prepress</div>
-                    <h5 class="mb-2">Pregătire fișiere profesională</h5>
-                    <p class="text-muted mb-0">Retuș, preflight, profilare ICC, PDF/X, bleed & overprint corect pentru
-                        tipar fără surprize.</p>
+                <div class="h-100 p-4 border rounded-3 cap-card">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold cap-pill">Prepress</div>
+                    <h5 class="mb-2">Fișiere pregătite impecabil</h5>
+                    <p class="text-muted mb-0">
+                        Preflight, corecții, profiluri ICC, PDF/X, bleed & overprint — ca tiparul să iasă corect din
+                        prima,
+                        fără surprize.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="h-100 p-4 border rounded-3">
-                    <div class="mb-2 small text-uppercase text-primary fw-bold">Tipar securizat</div>
-                    <h5 class="mb-2">Elemente anti-fals integrate</h5>
-                    <p class="text-muted mb-0">Microtext, filigran „FT”, cerneluri UV/termo/fotocromice, timbru sec,
-                        numerotare unică, inseriere.</p>
+                <div class="h-100 p-4 border rounded-3 cap-card">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold cap-pill">Tipar securizat</div>
+                    <h5 class="mb-2">Protecție anti-fals în producție</h5>
+                    <p class="text-muted mb-0">
+                        Microtext, filigran „FT”, cerneluri UV/termo/fotocromice, timbru sec, numerotare unică și
+                        inseriere
+                        pentru trasabilitate.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="h-100 p-4 border rounded-3">
-                    <div class="mb-2 small text-uppercase text-primary fw-bold">Digital & VDP</div>
-                    <h5 class="mb-2">Personalizare la viteză mare</h5>
-                    <p class="text-muted mb-0">Serii unice, coduri de bare/QR, adrese; tiraje mici/medii, integrare
-                        directă din prepress.</p>
+                <div class="h-100 p-4 border rounded-3 cap-card">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold cap-pill">Digital & VDP</div>
+                    <h5 class="mb-2">Personalizare rapidă, precisă</h5>
+                    <p class="text-muted mb-0">
+                        Date variabile (VDP), serii unice, coduri QR / bare, adresare — ideal pentru tiraje mici și
+                        medii,
+                        cu integrare directă din prepress.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="h-100 p-4 border rounded-3">
-                    <div class="mb-2 small text-uppercase text-primary fw-bold">Finisare</div>
-                    <h5 class="mb-2">Aspect premium & protecție</h5>
-                    <p class="text-muted mb-0">Folio cald, timbru sec, embosare, lăcuire totală/spot, plastifiere
-                        lucios/mat/soft-touch.</p>
+                <div class="h-100 p-4 border rounded-3 cap-card">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold cap-pill">Finisare</div>
+                    <h5 class="mb-2">Look premium & durabilitate</h5>
+                    <p class="text-muted mb-0">
+                        Folio la cald, embosare, timbru sec, lăcuire totală/spot și plastifiere (mat/lucios/soft-touch)
+                        —
+                        pentru impact și protecție.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="h-100 p-4 border rounded-3">
-                    <div class="mb-2 small text-uppercase text-primary fw-bold">Trasabilitate</div>
+                <div class="h-100 p-4 border rounded-3 cap-card">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold cap-pill">Trasabilitate</div>
                     <h5 class="mb-2">Control complet pe flux</h5>
-                    <p class="text-muted mb-0">Registru de producție, verificări QC, audit intern și rapoarte pe loturi
-                        & serii.</p>
+                    <p class="text-muted mb-0">
+                        Verificări QC, rapoarte pe loturi și serii, monitorizare a pașilor de producție — pentru
+                        rezultate
+                        constante și livrări sigure.
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="h-100 p-4 border rounded-3">
-                    <div class="mb-2 small text-uppercase text-primary fw-bold">Patrimoniu</div>
+                <div class="h-100 p-4 border rounded-3 cap-card">
+                    <div class="mb-2 small text-uppercase text-primary fw-bold cap-pill">Patrimoniu</div>
                     <h5 class="mb-2">1872 – prezent</h5>
-                    <p class="text-muted mb-0">Tradiție în emisiuni filatelice, piese de colecție, expertiză tehnică și
-                        culturală.</p>
+                    <p class="text-muted mb-0">
+                        Peste un secol și jumătate de experiență în tipar, emisiuni filatelice și proiecte cu valoare
+                        culturală — expertiză tehnică și tradiție.
+                    </p>
                 </div>
             </div>
         </div>
@@ -320,30 +390,35 @@
         <!-- În cifre -->
         <div class="row text-center g-4 mt-5">
             <div class="col-6 col-lg-3">
-                <div class="p-4 border rounded-3 h-100">
-                    <div class="display-6 fw-bold text-primary">150+</div>
+                <div class="p-4 border rounded-3 h-100 stat-card">
+                    <div class="display-6 fw-bold text-primary stat-number" data-target="150" data-suffix="+">0</div>
                     <div class="text-muted">ani de tipar</div>
                 </div>
             </div>
+
             <div class="col-6 col-lg-3">
-                <div class="p-4 border rounded-3 h-100">
+                <div class="p-4 border rounded-3 h-100 stat-card">
                     <div class="display-6 fw-bold text-primary">1–6</div>
                     <div class="text-muted">culori timbre</div>
                 </div>
             </div>
+
             <div class="col-6 col-lg-3">
-                <div class="p-4 border rounded-3 h-100">
-                    <div class="display-6 fw-bold text-primary">100%</div>
+                <div class="p-4 border rounded-3 h-100 stat-card">
+                    <div class="display-6 fw-bold text-primary stat-number" data-target="100" data-suffix="%">0</div>
                     <div class="text-muted">trasabilitate</div>
                 </div>
             </div>
+
             <div class="col-6 col-lg-3">
-                <div class="p-4 border rounded-3 h-100">
+                <div class="p-4 border rounded-3 h-100 stat-card">
                     <div class="display-6 fw-bold text-primary">VDP</div>
                     <div class="text-muted">inseriere automată</div>
                 </div>
             </div>
         </div>
+
+
 
 
 
@@ -363,7 +438,8 @@
                                     style="width:60px;height:60px;">
                                 <div class="ps-3">
                                     <h4 class="text-primary mb-1">Sebastian Burduja</h4>
-                                    <small class="text-uppercase">ministru al energiei</small>
+                                    <small class="text-uppercase">Membru al Camerei Deputaților din Parlamentul
+                                        României</small>
                                 </div>
                             </div>
                             <div class="pt-3 pb-4 px-4" style="text-align:justify;">
@@ -497,7 +573,7 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
                                 <a class="text-light mb-2" href="blog.html"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                <a class="text-light" href="contact.html"><i
+                                <a class="text-light" href="contact.php"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
                             </div>
                         </div>
@@ -516,7 +592,7 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
                                 <a class="text-light mb-2" href="blog.html"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                <a class="text-light" href="contact.html"><i
+                                <a class="text-light" href="contact.php"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
                             </div>
                         </div>
@@ -645,6 +721,68 @@
             wrapper.replaceChildren(iframe);
         });
     </script>
+    <script>
+        // ===== Animated counters (only when visible) =====
+        (function () {
+            const nums = document.querySelectorAll('.stat-number');
+
+            function animate(el) {
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                const suffix = el.getAttribute('data-suffix') || "";
+                const duration = 900; // ms
+                const start = performance.now();
+
+                function frame(t) {
+                    const p = Math.min((t - start) / duration, 1);
+                    const value = Math.floor(target * (0.15 + 0.85 * p)); // ease-ish
+                    el.textContent = value + suffix;
+                    if (p < 1) requestAnimationFrame(frame);
+                }
+                requestAnimationFrame(frame);
+            }
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (!e.isIntersecting) return;
+                    animate(e.target);
+                    io.unobserve(e.target);
+                });
+            }, { threshold: 0.35 });
+
+            nums.forEach(n => io.observe(n));
+        })();
+    </script>
+    <div id="google_translate_element" style="display:none;"></div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ro',
+                includedLanguages: 'ro,en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function setLang(lang) {
+            localStorage.setItem('site_lang', lang);
+
+            // cookie folosit de Google Translate
+            document.cookie = "googtrans=/ro/" + lang + ";path=/";
+            document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+
+            location.reload();
+        }
+
+        // Aplică limba salvată automat la încărcarea paginii
+        (function () {
+            const lang = localStorage.getItem('site_lang');
+            if (lang && lang !== 'ro') {
+                document.cookie = "googtrans=/ro/" + lang + ";path=/";
+                document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+            }
+        })();
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 

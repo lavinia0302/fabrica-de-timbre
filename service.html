@@ -114,15 +114,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Servicii</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Noutăți</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 
                     <!-- RO/EN intră și ele în meniu pe mobil -->
                     <li class="nav-item ms-lg-3">
                         <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
-                            <a class="btn btn-sm btn-light text-dark px-2" href="service.html" aria-label="Română"
-                                aria-current="true">RO</a>
-                            <a class="btn btn-sm btn-dark text-white px-2" href="servicii_engleza.html"
-                                aria-label="English">EN</a>
+                            <a class="btn btn-sm btn-light text-dark px-2" href="#"
+                                onclick="setLang('ro'); return false;" aria-label="Română">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="#"
+                                onclick="setLang('en'); return false;" aria-label="English">EN</a>
+
                         </div>
                     </li>
                 </ul>
@@ -184,9 +185,41 @@
     <div class="container-fluid py-4" id="detalii-servicii">
         <div class="container py-4">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 780px;">
-
                 <h1 class="mb-0">Ce cuprinde fiecare serviciu</h1>
             </div>
+
+            <!-- ✅ Despre Fabrica de Timbre -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-12">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-4">
+
+                            <h2 class="h4 mb-2">Fabrica de Timbre</h2>
+
+                            <p class="mb-2">
+                                <strong>Sucursala Specializată</strong> a Companiei Naționale Poșta Română S.A.
+                            </p>
+
+                            <ul class="bullet-list mb-3">
+                                <li><strong>Anul înființării:</strong> 1872</li>
+                            </ul>
+
+                            <!-- Butoane -->
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <a href="utilaje.html" class="btn btn-primary">
+                                    🔧 Parc tehnic & utilaje
+                                </a>
+
+                                <a href="produse_si_servicii.html" class="btn btn-outline-dark">
+                                    📦 Servicii & produse comerciale
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="row g-4">
                 <!-- Nav (stânga) -->
@@ -196,7 +229,7 @@
                         <button class="nav-link service-pill active" id="tab-prepress" data-bs-toggle="pill"
                             data-bs-target="#prepress" type="button" role="tab" aria-controls="prepress"
                             aria-selected="true">
-                            <i class="fa fa-drafting-compass me-2"></i> DTP & Prepress
+                            <i class="fa fa-drafting-compass me-2"></i> DTP &amp; Prepress
                         </button>
 
                         <button class="nav-link service-pill" id="tab-securizat" data-bs-toggle="pill"
@@ -208,25 +241,25 @@
                         <button class="nav-link service-pill" id="tab-timbre" data-bs-toggle="pill"
                             data-bs-target="#timbre" type="button" role="tab" aria-controls="timbre"
                             aria-selected="false">
-                            <i class="fa fa-stamp me-2"></i> Timbre & filatelie
+                            <i class="fa fa-stamp me-2"></i> Timbre &amp; filatelie
                         </button>
 
                         <button class="nav-link service-pill" id="tab-digital" data-bs-toggle="pill"
                             data-bs-target="#digital" type="button" role="tab" aria-controls="digital"
                             aria-selected="false">
-                            <i class="fa fa-digital-tachograph me-2"></i> Tipar digital & VDP
+                            <i class="fa fa-digital-tachograph me-2"></i> Tipar digital &amp; VDP
                         </button>
 
                         <button class="nav-link service-pill" id="tab-finisare" data-bs-toggle="pill"
                             data-bs-target="#finisare" type="button" role="tab" aria-controls="finisare"
                             aria-selected="false">
-                            <i class="fa fa-tools me-2"></i> Finisare & legătorie
+                            <i class="fa fa-tools me-2"></i> Finisare &amp; legătorie
                         </button>
 
                         <button class="nav-link service-pill" id="tab-consumabile" data-bs-toggle="pill"
                             data-bs-target="#consumabile" type="button" role="tab" aria-controls="consumabile"
                             aria-selected="false">
-                            <i class="fa fa-cogs me-2"></i> Consumabile & altele
+                            <i class="fa fa-cogs me-2"></i> Consumabile &amp; altele
                         </button>
                     </div>
                 </div>
@@ -245,18 +278,35 @@
                                     <span class="badge bg-primary service-badge">Prepress</span>
                                 </div>
                                 <div class="card-body p-4">
-                                    <h3 class="mb-3">DTP & Prepress</h3>
+                                    <h3 class="mb-3">DTP &amp; Prepress</h3>
 
+                                    <!-- ✅ PASTRAT: ce aveai -->
                                     <ul class="bullet-list">
                                         <li>
                                             Concepție grafică, tehnoredactare, machetare, selecții de culoare, procesare
-                                            film. Servicii complete de prepress pentru offset sau tip editură – culegere
-                                            de
+                                            film.
+                                            Servicii complete de prepress pentru offset sau tip editură – culegere de
                                             text, așezare în pagină.
                                         </li>
-                                        <li>Procesare de imagine la nivel profesional (retuș, preflight, profilare ICC,
-                                            PDF/X, bleed, overprint).</li>
-                                        <li>Separatii de culoare și realizarea de filme / CTP pentru offset.</li>
+                                        <li>
+                                            Procesare de imagine la nivel profesional (retuș, preflight, profilare ICC,
+                                            PDF/X, bleed, overprint).
+                                        </li>
+                                        <li>Separații de culoare și realizarea de filme / CTP pentru offset.</li>
+                                    </ul>
+
+                                    <!-- ✅ ADAUGAT: Dotare (lipsise) -->
+                                    <h5 class="mt-4 mb-2">Dotare &amp; echipamente</h5>
+                                    <ul class="check-list mb-0">
+                                        <li>Stații grafice Hewlett-Packard</li>
+                                        <li>Echipamente pentru tehnologia filmului</li>
+                                        <li>
+                                            Imagesetter Primesetter 74 (expunere–developare on-line, dimensiune film 76
+                                            × 77 cm,
+                                            rezoluție 3386 dpi, frecvență raster 60–102 linii/cm)
+                                        </li>
+                                        <li>IRational Screening SATIN-DIAMOND</li>
+                                        <li>Verificări/controale cu echipamente GRETAG</li>
                                     </ul>
                                 </div>
                             </div>
@@ -274,19 +324,35 @@
 
                                 <div class="card-body p-4">
                                     <h3 class="mb-3">Imprimare securizată</h3>
-                                    <p>Tipar înalt, plan și adânc, combinat cu elemente anti-fals pentru documente
-                                        sigure și produse de valoare.</p>
 
-                                    <h5 class="mt-3 mb-2">Ce imprimăm securizat</h5>
+                                    <!-- ✅ PASTRAT -->
+                                    <p>
+                                        Tipar înalt, plan și adânc, combinat cu elemente anti-fals pentru documente
+                                        sigure și produse de valoare.
+                                    </p>
+
+                                    <!-- ✅ ADAUGAT: listă extinsă “Ce tipărim” (lipsise explicit complet) -->
+                                    <h5 class="mt-3 mb-2">Ce tipărim / realizăm</h5>
                                     <ul class="check-list">
                                         <li>Imprimate de valoare (acțiuni, certificate de depozit, diplome, certificate
                                             de absolvire)</li>
-                                        <li>Timbre în 1–6 culori, pe hârtie gumată sau autoadezivă, formate variate
-                                            (romb, rectangular)</li>
-                                        <li>Întreguri poștale, plicuri tematice cu timbru pre-plătit</li>
-                                        <li>Etichete inseriate / cu perfor pe margine</li>
+                                        <li>Întreguri poștale</li>
+                                        <li>Reviste, ziare și cărți (tiraje mici/medii)</li>
+                                        <li>Pliante, broșuri, mape, afișe, cataloage, foi volante</li>
+                                        <li>Plicuri personalizate sau albe, cărți de vizită, produse promoționale pe
+                                            hârtie/carton</li>
+                                        <li>Agende (cu sau fără personalizare), finisate inclusiv prin spiralare</li>
+                                        <li>Calendare (perete, triptic, birou, buzunar)</li>
+                                        <li>Ilustrate și felicitări</li>
+                                        <li>Etichete (inseriate / cu perfor pe margine)</li>
+                                        <li>
+                                            Timbre 1–6 culori, pe hârtie gumată sau autoadezivă, formate variate (romb,
+                                            rectangular)
+                                        </li>
+                                        <li>Plicuri tematice cu timbru pre-plătit</li>
                                     </ul>
 
+                                    <!-- ✅ PASTRAT -->
                                     <h5 class="mt-4 mb-2">Elemente de securitate disponibile</h5>
                                     <ul class="check-list">
                                         <li>Hârtie cu filigran propriu „FT” în masa hârtiei</li>
@@ -297,14 +363,38 @@
                                         <li>Numerotare unică, coduri de bare/QR și inseriere automată de serii</li>
                                     </ul>
 
-                                    <h5 class="mt-4 mb-2">Trasabilitate & control</h5>
+                                    <!-- ✅ ADAUGAT: detaliu din text (filigran FT + posibilități) -->
+                                    <p class="mb-3">
+                                        Pentru imprimate de valoare se pot utiliza hârtii speciale (filigran și/sau
+                                        fibre UV) și cerneluri
+                                        speciale; se poate integra microtext și timbru sec, plus inseriere automată cu
+                                        serii unice.
+                                    </p>
+
+                                    <!-- ✅ ADAUGAT: Press-room / utilaje (lipsise) -->
+                                    <h5 class="mt-4 mb-2">Press-room (Tipar plan) – utilaje</h5>
+                                    <ul class="check-list">
+                                        <li>HEIDELBERG SPEEDMASTER CD 74 6+L, 50×70 cm (6 grupuri de tipar + grup de
+                                            lăcuire în infraroșu)</li>
+                                        <li>HEIDELBERG SPEEDMASTER 50×70 cm (1 culoare + grup de numerotație)</li>
+                                        <li>ROLAND PRAKTICA 35×50 cm, 2 culori</li>
+                                        <li>Mașină de tipar rotativă Edelman V 52 (lățime maximă tipar 510 mm)</li>
+                                    </ul>
+
+                                    <p class="mb-3">
+                                        Ambele mașini Heidelberg sunt comandate din calculator prin interfețe CIP 2003,
+                                        cu ajutorul
+                                        soft-urilor specializate HEIDELBERG PREPRESS INTERFACE.
+                                    </p>
+
+                                    <!-- ✅ PASTRAT -->
+                                    <h5 class="mt-4 mb-2">Trasabilitate &amp; control</h5>
                                     <ul class="check-list mb-0">
                                         <li>Trasabilitate completă pe serii și loturi, registru de producție</li>
                                         <li>Control de calitate pe flux și audit intern</li>
                                         <li>Consultanță de design pentru integrarea discretă a elementelor anti-fals
                                         </li>
                                     </ul>
-
                                 </div>
                             </div>
                         </div>
@@ -322,10 +412,14 @@
 
                                 <div class="card-body p-4">
                                     <h3 class="mb-3">Timbre &amp; filatelie</h3>
-                                    <p>Realizăm emisiuni filatelice cap-coadă – de la concept și machetare la tipărire,
-                                        perfor, finisare și ambalare.</p>
 
-                                    <ul class="check-list mb-0">
+                                    <!-- ✅ PASTRAT -->
+                                    <p>
+                                        Realizăm emisiuni filatelice cap-coadă – de la concept și machetare la tipărire,
+                                        perfor, finisare și ambalare.
+                                    </p>
+
+                                    <ul class="check-list">
                                         <li>Timbre 1–6 culori, în coli/mini-coli, formate variate (romb, rectangular)
                                         </li>
                                         <li>Hârtie gumată sau autoadezivă, adezivi/lipici filatelic</li>
@@ -336,6 +430,12 @@
                                         <li>Serii numerotate, inseriere și seturi complete pentru colecționari</li>
                                         <li>Ambalaje premium, mape/etui pentru prezentare și colecție</li>
                                     </ul>
+
+                                    <!-- ✅ ADAUGAT: plicuri de corespondență clar, ca în text -->
+                                    <p class="mb-0">
+                                        Realizăm și plicuri de corespondență simple sau tematice, inclusiv variante cu
+                                        timbru pre-plătit.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -352,8 +452,13 @@
 
                                 <div class="card-body p-4">
                                     <h3 class="mb-3">Tipar digital &amp; VDP (date variabile)</h3>
-                                    <p>Personalizare rapidă, calitate foto și policromie stabilă – perfect pentru tiraje
-                                        mici/medii și campanii one-to-one, cu integrare directă din prepress.</p>
+
+                                    <!-- ✅ PASTRAT -->
+                                    <p>
+                                        Personalizare rapidă, calitate foto și policromie stabilă – perfect pentru
+                                        tiraje mici/medii și campanii one-to-one,
+                                        cu integrare directă din prepress.
+                                    </p>
 
                                     <ul class="check-list check-list--tick mb-0">
                                         <li>VDP complet: nume, serii unice, coduri de bare/QR, adrese, imagini &amp;
@@ -387,8 +492,12 @@
 
                                 <div class="card-body p-4">
                                     <h3 class="mb-3">Finisare &amp; legătorie</h3>
-                                    <p>De la foldare și brosare la plastifiere, lăcuire, ștanțare și efecte speciale —
-                                        finisajul dă aspectul premium lucrărilor.</p>
+
+                                    <!-- ✅ PASTRAT -->
+                                    <p>
+                                        De la foldare și brosare la plastifiere, lăcuire, ștanțare și efecte speciale —
+                                        finisajul dă aspectul premium lucrărilor.
+                                    </p>
 
                                     <h5 class="mt-3 mb-2">Operații de legătorie</h5>
                                     <ul class="check-list">
@@ -405,6 +514,16 @@
                                         <li>Lăcuire totală sau selectivă (UV spot / relief)</li>
                                         <li>Folio cald (auriu, argintiu, culori speciale), timbru sec &amp; embosare
                                         </li>
+                                    </ul>
+
+                                    <!-- ✅ ADAUGAT: Post-press utilaje (lipsise) -->
+                                    <h5 class="mt-4 mb-2">Post-press – utilaje</h5>
+                                    <ul class="check-list">
+                                        <li>Mașină de tăiat cu un cuțit POLAR 115</li>
+                                        <li>Mașină de adunat cu 21 de stații</li>
+                                        <li>Mașină de fălțuit STAHL cu 3 foldere</li>
+                                        <li>Mașină de laminat (plastifiat)</li>
+                                        <li>Echipament WISTA pentru perforarea timbrelor</li>
                                     </ul>
 
                                     <h5 class="mt-3 mb-2">Exemple de aplicații finisate</h5>
@@ -436,6 +555,8 @@
 
                                 <div class="card-body p-4">
                                     <h3 class="mb-3">Consumabile &amp; alte servicii</h3>
+
+                                    <!-- ✅ PASTRAT -->
                                     <p>Servicii și materiale conexe pentru fluxuri complete, întreținere și
                                         post-producție.</p>
 
@@ -464,6 +585,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Footer Start -->
     <footer class="site-footer container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -532,7 +654,7 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
                                 <a class="text-light mb-2" href="blog.html"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                <a class="text-light" href="contact.html"><i
+                                <a class="text-light" href="contact.php"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
                             </div>
                         </div>
@@ -551,7 +673,7 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
                                 <a class="text-light mb-2" href="blog.html"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                <a class="text-light" href="contact.html"><i
+                                <a class="text-light" href="contact.php"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
                             </div>
                         </div>
@@ -662,6 +784,36 @@
             });
         })();
     </script>
+    <div id="google_translate_element" style="display:none;"></div>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ro',
+                includedLanguages: 'ro,en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function setLang(lang) {
+            localStorage.setItem('site_lang', lang);
+
+            document.cookie = "googtrans=/ro/" + lang + ";path=/";
+            document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+
+            location.reload();
+        }
+
+        (function () {
+            const lang = localStorage.getItem('site_lang');
+            if (lang && lang !== 'ro') {
+                document.cookie = "googtrans=/ro/" + lang + ";path=/";
+                document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+            }
+        })();
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>

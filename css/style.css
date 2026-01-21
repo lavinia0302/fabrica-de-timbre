@@ -608,7 +608,7 @@ h6,
  ********************/
 .bg-header-about {
     background: linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
-        url("../img/37031075_2162048520504555_8133191435982733312_n.jpg") center/cover no-repeat;
+        url("../img/5D3_1012.jpg") center/cover no-repeat;
     min-height: 560px;
     /* ↑ fă-l cât vrei: 520–720px etc. */
     display: flex;
@@ -630,7 +630,7 @@ h6,
 .bg-header-news {
     background:
         linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)),
-        url("../img/20251013_0907_Ziare Proaspăt Tipărite_simple_compose_01k7e2v1w8f4m872x7a8d0ca3b.png") center/cover no-repeat;
+        url("../img/5D3_0797 (1).jpg") center/cover no-repeat;
 }
 
 
@@ -3159,4 +3159,124 @@ body {
     }
 
     /* pe desktop, chiar lipit de margine */
+}
+
+/* Card base */
+.cap-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    will-change: transform;
+}
+
+/* subtle gradient shine on hover */
+.cap-card::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -60%;
+    width: 60%;
+    height: 180%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .25), transparent);
+    transform: rotate(18deg);
+    opacity: 0;
+    transition: opacity .35s ease, left .65s ease;
+    pointer-events: none;
+}
+
+.cap-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .12);
+    border-color: rgba(13, 110, 253, .35);
+    /* bootstrap primary-ish */
+}
+
+.cap-card:hover::before {
+    opacity: 1;
+    left: 120%;
+}
+
+/* animated underline for title */
+.cap-card h5 {
+    position: relative;
+    display: inline-block;
+}
+
+.cap-card h5::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 0;
+    background: currentColor;
+    opacity: .65;
+    transition: width .35s ease;
+    border-radius: 2px;
+}
+
+.cap-card:hover h5::after {
+    width: 100%;
+}
+
+/* small label pill effect */
+.cap-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    background: rgba(13, 110, 253, .08);
+    transition: background .35s ease, transform .35s ease;
+}
+
+.cap-card:hover .cap-pill {
+    background: rgba(13, 110, 253, .14);
+    transform: translateY(-1px);
+}
+
+/* reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+
+    .cap-card,
+    .cap-card::before,
+    .cap-card h5::after,
+    .cap-pill {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Butoane filtru utilaje */
+#equipFilters .btn {
+    border: none;
+    background-color: rgba(0, 0, 0, .12);
+    color: #000;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+#equipFilters .btn:hover {
+    background-color: rgba(0, 0, 0, .18);
+}
+
+/* Buton activ */
+#equipFilters .btn.active,
+#equipFilters .btn.btn-primary {
+    background-color: #0d6efd;
+    /* sau culoarea ta de brand */
+    color: #fff;
+}
+
+/* Elimină stilul Bootstrap default */
+#equipFilters .btn-outline-primary {
+    border: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
 }

@@ -119,15 +119,16 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Servicii</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Noutăți</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 
                     <!-- RO/EN intră și ele în meniu pe mobil -->
                     <li class="nav-item ms-lg-3">
                         <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
-                            <a class="btn btn-sm btn-light text-dark px-2" href="index.html" aria-label="Română"
-                                aria-current="true">RO</a>
-                            <a class="btn btn-sm btn-dark text-white px-2" href="index_engleza.html"
-                                aria-label="English">EN</a>
+                            <a class="btn btn-sm btn-light text-dark px-2" href="#"
+                                onclick="setLang('ro'); return false;" aria-label="Română">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="#"
+                                onclick="setLang('en'); return false;" aria-label="English">EN</a>
+
                         </div>
                     </li>
                 </ul>
@@ -272,7 +273,17 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Ani de tradiție</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">153</h1>
+                            <h1 class="text-white mb-0" data-toggle="counter-up" id="yearsTradition">153</h1>
+
+                            <script>
+                                (function () {
+                                    const startYear = 1872;
+                                    const years = new Date().getFullYear() - startYear;
+                                    const el = document.getElementById('yearsTradition');
+                                    if (el) el.textContent = years;
+                                })();
+                            </script>
+
                         </div>
                     </div>
                 </div>
@@ -301,7 +312,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Elemente anti-fals</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">10</h1>
+                            <h1 class="text-white mb-0">10+</h1>
                             <small class="text-light">microtext, holograme, UV, filigran „FT”, timbru sec…</small>
                         </div>
                     </div>
@@ -686,7 +697,8 @@
                                 style="width:60px;height:60px;">
                             <div class="ps-3">
                                 <h4 class="text-primary mb-1">Sebastian Burduja</h4>
-                                <small class="text-uppercase">ministru al energiei</small>
+                                <small class="text-uppercase">Membru al Camerei Deputaților din Parlamentul României
+                                </small>
                             </div>
                         </div>
                         <div class="pt-3 pb-4 px-4" style="text-align:justify;">
@@ -805,7 +817,7 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
                                 <a class="text-light mb-2" href="blog.html"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                <a class="text-light" href="contact.html"><i
+                                <a class="text-light" href="contact.php"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
                             </div>
                         </div>
@@ -824,7 +836,7 @@
                                         class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
                                 <a class="text-light mb-2" href="blog.html"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                <a class="text-light" href="contact.html"><i
+                                <a class="text-light" href="contact.php"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
                             </div>
                         </div>
@@ -928,8 +940,39 @@
     </script>
 
 
+    <div id="google_translate_element" style="display:none;"></div>
 
 
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ro',
+                includedLanguages: 'ro,en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function setLang(lang) {
+            localStorage.setItem('site_lang', lang);
+
+            // cookie folosit de Google Translate
+            document.cookie = "googtrans=/ro/" + lang + ";path=/";
+            document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+
+            location.reload();
+        }
+
+        // Aplică limba salvată automat la încărcarea paginii
+        (function () {
+            const lang = localStorage.getItem('site_lang');
+            if (lang && lang !== 'ro') {
+                document.cookie = "googtrans=/ro/" + lang + ";path=/";
+                document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+            }
+        })();
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 </body>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fabrica de Timbre — Timbre personalizate pentru branduri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tipărim timbre personalizate cu finisaje premium: folio, embosare, holograme. Producție rapidă, calitate garantată. Cere ofertă acum!">
+    <meta name="keywords"
+        content="timbre personalizate, tipografie timbre, folio, embosare, holograme, fabrica de timbre">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/Untitled image(56).png">
+    <link rel="shortcut icon" type="image/png" href="img/Untitled image(56).png">
+    <link rel="apple-touch-icon" href="img/Untitled image(56).png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font special pentru titlul din hero -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Mic override: font doar pentru titlul din hero -->
+    <style>
+        .hero-title {
+            font-family: 'Playfair Display', serif !important;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: .5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height:45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Strada Fabrica de Chibrituri
+                        28, București 050183</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>021 335 5350</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>ft@posta-romana.ro</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height:45px;">
+                    <!-- Facebook -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank" rel="noopener"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f fw-normal"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram fw-normal"></i>
+                    </a>
+
+                    <!-- Email -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                        href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
+                        <i class="fa fa-envelope-open fw-normal"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="img/header-site-Posta-Tipografie.png" alt="Fabrica de Timbre" class="brand-logo" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Acasă</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Servicii</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Noutăți</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+
+                    <!-- RO/EN intră și ele în meniu pe mobil -->
+                    <li class="nav-item ms-lg-3">
+                        <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
+                            <a class="btn btn-sm btn-light text-dark px-2" href="#"
+                                onclick="setLang('ro'); return false;" aria-label="Română">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="#"
+                                onclick="setLang('en'); return false;" aria-label="English">EN</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid hero-std" style="
+       background:
+         linear-gradient(rgba(17,24,39,.65), rgba(17,24,39,.65)),
+         url('img/IMG_1247.JPG') center/cover no-repeat;">
+            <div class="row py-4">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 text-white">Utilaje & Tehnologii</h1>
+
+                    <p class="lead text-white-50 mb-3">
+                        Infrastructura tehnică a Fabricii de Timbre
+                    </p>
+
+                    <a href="index.html" class="h5 text-white">Acasă</a>
+                    <span class="text-white px-2">&#92;</span>
+                    <span class="h5 text-white-50">Utilaje & Tehnologii</span>
+                </div>
+            </div>
+        </div>
+
+
+        <main class="container py-5">
+
+            <!-- Intro -->
+            <div class="text-center mb-4">
+                <span class="text-primary fw-bold text-uppercase">Utilaje</span>
+                <h2 class="fw-bold mt-2">Parcul tehnic al Fabricii de Timbre</h2>
+                <p class="text-muted mb-0" style="max-width: 860px; margin: 0 auto;">
+                    Mai jos găsești utilajele și liniile de producție (utilaje clasice + echipamente moderne), grupate
+                    pe etape:
+                    tipar, personalizare (VDP), inseriere/împlicuire și finisare. Apasă pe o imagine pentru a o vedea la
+                    dimensiune mare.
+                </p>
+            </div>
+
+            <!-- Modernizare 2022 (echipamente noi din comunicatul de presă) -->
+            <section class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="p-4 border rounded-3 bg-light h-100">
+                        <h4 class="mb-2 text-primary">Modernizare tehnologică (2022)</h4>
+                        <p class="text-muted mb-0">
+                            În 2022, pentru Fabrica de Timbre au fost achiziționate două echipamente de ultimă
+                            generație, care permit oferte
+                            integrate pentru trimiteri masive (tipar + inseriere/împlicuire + pregătire pentru
+                            expediție): o
+                            <strong>linie tehnologică de insert în plicuri</strong> și un <strong>echipament de tipar
+                                digital color</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 border rounded-3 h-100">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="bg-primary rounded d-flex align-items-center justify-content-center"
+                                style="width:48px;height:48px;">
+                                <i class="fa fa-bolt text-white"></i>
+                            </div>
+                            <div>
+                                <div class="small text-uppercase text-muted">Investiție</div>
+                                <div class="h4 mb-1">6.000.000 lei</div>
+                                <div class="text-muted">fără TVA (achiziții 2022)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Grid utilaje -->
+            <div class="row g-4" id="equipGrid">
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="digital">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/IMG_1242.JPG" class="card-img-top object-fit-cover"
+                                alt="Canon – tipar digital color" data-bs-toggle="modal" data-bs-target="#equipModal"
+                                data-title="Canon – tipar digital color" data-cat="Digital & VDP"
+                                data-desc="Echipament de tipar digital color Canon, destinat producției de volum mare. Capacitate de tipărire: până la 210 coli A4/minut. Permite personalizarea cu date variabile (VDP): adresare, serii unice, coduri QR și coduri de bare, fiind integrabil în fluxuri de tipar și împlicuire pentru trimiteri masive."
+                                data-img="img/IMG_1242.JPG">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Digital & VDP</span>
+                                <small class="text-muted">Achiziție 2022</small>
+                            </div>
+                            <h5 class="card-title mb-2">Canon – tipar digital color</h5>
+                            <p class="card-text text-muted mb-0">
+                                Tipar digital de mare viteză, cu suport pentru personalizare și documente variabile.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 equip-item" data-category="inseriere">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/IMG_1246.JPG" class="card-img-top object-fit-cover"
+                                alt="BÖWE – linie de insert / împlicuire" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="BÖWE – linie de insert / împlicuire"
+                                data-cat="Inseriere / Împlicuire"
+                                data-desc="Linie tehnologică de inseriere în plicuri, produsă de BÖWE (Germania). Capacitate de procesare: până la 22.000 materiale/oră. Destinată trimiterilor masive de documente și fluxurilor integrate de tipar, inseriere și pregătire pentru expediție."
+                                data-img="img/IMG_1246.JPG">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Inseriere</span>
+                                <small class="text-muted">Achiziție 2022</small>
+                            </div>
+                            <h5 class="card-title mb-2">BÖWE – insert / împlicuire</h5>
+                            <p class="card-text text-muted mb-0">
+                                Linie de împlicuire automată pentru volume mari și documente personalizate.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="securizare">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/HEIDEL 1.jpg" class="card-img-top object-fit-cover"
+                                alt="Heidelberg SM – tipar offset cu numerotație (2004)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal"
+                                data-title="Heidelberg SM – tipar offset cu numerotație (2004)"
+                                data-cat="Tipar offset / Securizare"
+                                data-desc="Mașină de tipar offset Heidelberg SM, fabricată în anul 2004, echipată cu un grup de culoare și sistem de numerotație. Utilizată pentru tipărirea documentelor securizate, formularelor fiscale, certificatelor și imprimatelor de valoare, unde este necesară numerotarea unică și controlul strict al producției."
+                                data-img="img/HEIDEL 1.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Securizare</span>
+                                <small class="text-muted">2004</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">Heidelberg SM – numerotație</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Tipar offset cu numerotare unică, dedicat documentelor securizate
+                                și imprimatelor de valoare.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="offset">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/HEIDEL 2.jpg" class="card-img-top object-fit-cover"
+                                alt="Heidelberg – mașină de tipar offset (2004)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="Heidelberg – mașină de tipar offset (2004)"
+                                data-cat="Tipar offset"
+                                data-desc="Mașină de tipar offset Heidelberg, fabricată în anul 2004, echipată cu 6 grupuri de culoare și grup de lăcuire. Utilizată pentru tipărirea policromă de înaltă calitate a materialelor editoriale și comerciale, cu finisare în linie pentru protecție și aspect premium."
+                                data-img="img/HEIDEL 2.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Offset</span>
+                                <small class="text-muted">2004</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">Heidelberg – tipar offset</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Tipărire offset policromă (6 culori) cu lăcuire în linie,
+                                pentru lucrări editoriale și comerciale cu finisaj premium.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="offset">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/ROLAND.jpg" class="card-img-top object-fit-cover"
+                                alt="Roland – mașină de tipar offset (1997)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="Roland – mașină de tipar offset (1997)"
+                                data-cat="Tipar offset"
+                                data-desc="Mașină de tipar offset Roland, fabricată în anul 1997, echipată cu 2 grupuri de culoare. Utilizată pentru tipărirea imprimatelor comerciale, formularelor și materialelor editoriale, asigurând calitate constantă și fiabilitate în producție."
+                                data-img="img/ROLAND.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Offset</span>
+                                <small class="text-muted">1997</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">Roland – tipar offset</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Tipărire offset în 2 culori, destinată imprimatelor comerciale
+                                și lucrărilor editoriale de tiraj mic și mediu.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="offset">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/EHELMAN.jpg" class="card-img-top object-fit-cover"
+                                alt="Edelmann V52 – mașină de tipar rotativ (2009)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="Edelmann V52 – mașină de tipar rotativ (2009)"
+                                data-cat="Tipar rotativ / Offset"
+                                data-desc="Mașină de tipar rotativ Edelmann V52, fabricată în anul 2009, echipată cu 2 grupuri de culoare. Utilizată pentru tipărirea pe rolă a formularelor, documentelor securizate și imprimatelor de volum mare, cu productivitate ridicată și stabilitate cromatică."
+                                data-img="img/EHELMAN.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Tipar rotativ</span>
+                                <small class="text-muted">2009</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">Edelmann V52 – tipar rotativ</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Tipar pe rolă cu 2 grupuri de culoare, destinat formularelor și
+                                imprimatelor de volum mare, cu productivitate ridicată.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="offset">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/VICTORIA.jpg" class="card-img-top object-fit-cover"
+                                alt="Victoria 820 – mașină de tipar înalt (1975)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="Victoria 820 – mașină de tipar înalt (1975)"
+                                data-cat="Tipar înalt / Patrimoniu"
+                                data-desc="Mașină de tipar înalt Victoria 820, fabricată în anul 1975. Utilizată pentru imprimarea formularelor, registrelor, numerotărilor și lucrărilor cu cerințe de precizie mecanică. Reprezintă un utilaj clasic din patrimoniul tehnic al Fabricii de Timbre."
+                                data-img="img/VICTORIA.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Tipar înalt</span>
+                                <small class="text-muted">1975</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">Victoria 820 – tipar înalt</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Mașină de tipar înalt utilizată pentru formulare, numerotări și imprimate,
+                                parte din patrimoniul istoric al Fabricii de Timbre.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="finisare">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/VISTA.jpg" class="card-img-top object-fit-cover"
+                                alt="WISTA – mașină de perforare și finisare (2004)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="WISTA – mașină de perforare (2004)"
+                                data-cat="Finisare / Post-press"
+                                data-desc="Mașină de perforare WISTA, fabricată în 2004, utilizată în etapa de post-press pentru realizarea perforațiilor precise pe formulare, pliante și documente tehnice. Permite pregătirea materialelor pentru rupere controlată, inseriere sau finisare finală."
+                                data-img="img/VISTA.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Finisare</span>
+                                <small class="text-muted">2004</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">WISTA – perforare & finisare</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Mașină de perforare utilizată în post-press pentru formulare, pliante
+                                și documente tehnice, asigurând perforații precise pentru rupere sau inseriere.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="offset">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/BRILIANT.jpg" class="card-img-top object-fit-cover"
+                                alt="BRILLIANT – mașină de tipar (1972)" data-bs-toggle="modal"
+                                data-bs-target="#equipModal" data-title="BRILLIANT – mașină de tipar (1972)"
+                                data-cat="Tipar clasic / Patrimoniu"
+                                data-desc="Mașină de tipar BRILLIANT, fabricată în anul 1972, utilizată pentru tipar clasic pe coli de hârtie. A fost folosită la realizarea de imprimate tipografice, formulare și lucrări cu cerințe de stabilitate și repetabilitate, fiind parte din patrimoniul tehnic istoric al Fabricii de Timbre."
+                                data-img="img/BRILIANT.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Offset clasic</span>
+                                <small class="text-muted">1972</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">BRILLIANT – mașină de tipar</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Mașină de tipar clasic utilizată pentru imprimate și formulare,
+                                reprezentând o piesă importantă din patrimoniul tehnic al Fabricii de Timbre.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 equip-item" data-category="inseriere">
+                    <article class="card h-100 shadow-sm equip-card">
+                        <div class="ratio ratio-4x3 equip-thumb">
+                            <img src="img/PLICUIT.jpg" class="card-img-top object-fit-cover"
+                                alt="Mașină de plicuit – 1994" data-bs-toggle="modal" data-bs-target="#equipModal"
+                                data-title="Mașină de plicuit – 1994" data-cat="Inseriere / Împlicuire"
+                                data-desc="Mașină de plicuit (1994) utilizată pentru fabricarea și/sau pregătirea plicurilor: plierea colilor, aplicarea adezivului și lipirea clapetelor, cu alimentare continuă. Folosită pentru plicuri de corespondență și produse care necesită împlicuire în fluxul de producție."
+                                data-img="img/PLICUIT.jpg">
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary">Inseriere</span>
+                                <small class="text-muted">1994</small>
+                            </div>
+
+                            <h5 class="card-title mb-2">Mașină de plicuit</h5>
+
+                            <p class="card-text text-muted mb-0">
+                                Pliere + lipire pentru realizarea/pregătirea plicurilor în flux.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+
+            </div>
+        </main>
+
+
+        <!-- MODAL (poza mare + descriere) -->
+        <div class="modal fade" id="equipModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="modal-title mb-0" id="equipModalTitle">Titlu utilaj</h5>
+                            <small class="text-muted" id="equipModalCat">Categorie</small>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="equipModalImg" src="" alt="" class="img-fluid rounded mb-3">
+                        <p class="mb-0" id="equipModalDesc"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS: animații + hover -->
+        <style>
+            .equip-card {
+                transition: transform .18s ease, box-shadow .18s ease;
+            }
+
+            .equip-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 .5rem 1.2rem rgba(0, 0, 0, .12) !important;
+            }
+
+            .equip-thumb img {
+                cursor: pointer;
+                transition: transform .25s ease;
+            }
+
+            .equip-card:hover .equip-thumb img {
+                transform: scale(1.03);
+            }
+
+            .object-fit-cover {
+                object-fit: cover;
+            }
+        </style>
+
+        <!-- JS: filtre + modal populate -->
+        <script>
+            // Filtru utilaje
+            (function () {
+                const filters = document.getElementById('equipFilters');
+                const items = Array.from(document.querySelectorAll('.equip-item'));
+
+                if (!filters) return;
+
+                filters.addEventListener('click', (e) => {
+                    const btn = e.target.closest('button[data-filter]');
+                    if (!btn) return;
+
+                    // active button UI
+                    filters.querySelectorAll('button').forEach(b => {
+                        b.classList.remove('btn-primary', 'active');
+                        b.classList.add('btn-outline-primary');
+                    });
+                    btn.classList.remove('btn-outline-primary');
+                    btn.classList.add('btn-primary', 'active');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    items.forEach(card => {
+                        const cat = card.getAttribute('data-category');
+                        const show = (filter === 'all' || cat === filter);
+                        card.style.display = show ? '' : 'none';
+                    });
+                });
+            })();
+
+            // Modal content din data-attributes
+            (function () {
+                const modal = document.getElementById('equipModal');
+                if (!modal) return;
+
+                modal.addEventListener('show.bs.modal', function (event) {
+                    const trigger = event.relatedTarget;
+                    if (!trigger) return;
+
+                    const title = trigger.getAttribute('data-title') || '';
+                    const cat = trigger.getAttribute('data-cat') || '';
+                    const desc = trigger.getAttribute('data-desc') || '';
+                    const img = trigger.getAttribute('data-img') || '';
+
+                    document.getElementById('equipModalTitle').textContent = title;
+                    document.getElementById('equipModalCat').textContent = cat;
+                    document.getElementById('equipModalDesc').textContent = desc;
+
+                    const modalImg = document.getElementById('equipModalImg');
+                    modalImg.src = img;
+                    modalImg.alt = title;
+                });
+            })();
+        </script>
+
+
+
+        <!-- Footer Start -->
+        <footer class="site-footer container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row gx-5">
+                    <!-- Logo + tagline -->
+                    <div class="col-lg-4 col-md-6 ps-0">
+                        <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
+                            <a href="index.html" class="navbar-brand p-0">
+                                <img src="img/Logo-POSTA-Tipografie.png" alt="Poșta Tipografie"
+                                    style="max-height:96px;height:auto;filter:brightness(0) invert(1);" />
+                            </a>
+                            <p class="mt-3 mb-0">Fabrica de Timbre — tipar premium din 1872.</p>
+                        </div>
+                    </div>
+
+                    <!-- Coloane dreapta -->
+                    <div class="col-lg-8 col-md-6">
+                        <div class="row gx-5">
+                            <!-- Date de contact -->
+                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Date de contact</h3>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                                    <p class="mb-0">Strada Fabrica de Chibrituri 28, București 050183</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-envelope-open text-primary me-2"></i>
+                                    <p class="mb-0">ft@posta-romana.ro</p>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <p class="mb-0">021 335 5350</p>
+                                </div>
+                                <div class="d-inline-flex align-items-center" style="height:45px;">
+                                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                        href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank"
+                                        rel="noopener" aria-label="Facebook">
+                                        <i class="fab fa-facebook-f fw-normal"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                        href="https://www.instagram.com/fabrica_de_timbre/" target="_blank"
+                                        rel="noopener" aria-label="Instagram">
+                                        <i class="fab fa-instagram fw-normal"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                                        href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
+                                        <i class="fa fa-envelope-open fw-normal"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Navigație -->
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Navigație</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
+                                    <a class="text-light mb-2" href="about.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
+                                    <a class="text-light mb-2" href="service.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
+                                    <a class="text-light mb-2" href="blog.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
+                                    <a class="text-light" href="contact.php"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
+                                </div>
+                            </div>
+
+                            <!-- Cele mai căutate -->
+                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                    <h3 class="text-light mb-0">Cele mai căutate</h3>
+                                </div>
+                                <div class="link-animated d-flex flex-column justify-content-start">
+                                    <a class="text-light mb-2" href="index.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
+                                    <a class="text-light mb-2" href="about.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
+                                    <a class="text-light mb-2" href="service.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
+                                    <a class="text-light mb-2" href="blog.html"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
+                                    <a class="text-light" href="contact.php"><i
+                                            class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strip de brand (în interiorul aceluiași .container) -->
+                <div class="row footer-brands-row pt-2 mt-2 border-top border-white-10">
+
+                    <div class="col-12">
+                        <div class="footer-brands">
+                            <a href="https://imobiliare.posta-romana.ro/" target="_blank" rel="noopener">
+                                <img class="footer-brand" src="img/Untitled image(55).png" alt="Poșta Imobiliare">
+                            </a>
+                            <img class="footer-brand" src="img/Untitled image(56).png" alt="Poșta Tipografie">
+                            <img class="footer-brand" src="img/Untitled image(56)(57).png"
+                                alt="Oficiul Poștal Universal">
+                            <img class="footer-brand" src="img/Untitled image(56)(58).png" alt="Poșta Finance">
+                            <img class="footer-brand" src="img/Untitled image(56)(59).png" alt="Poșta Logistics">
+                            <img class="footer-brand footer-brand--zor" src="img/Untitled image(51).png"
+                                alt="ZOR — Poșta Română">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /Footer End -->
+
+
+
+        <div class="container-fluid text-white" style="background:#061429;">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <div class="d-flex align-items-center justify-content-center" style="height:75px;">
+                            <p class="mb-0">
+                                &copy; <span id="year"></span> Sucursala Fabrica de Timbre — Compania Națională Poșta
+                                Română
+                                S.A. Toate drepturile rezervate.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // setează automat anul curent
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Footer End -->
+
+
+
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <div id="google_translate_element" style="display:none;"></div>
+        <script>
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'ro',
+                    includedLanguages: 'ro,en',
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+
+            function setLang(lang) {
+                localStorage.setItem('site_lang', lang);
+
+                // cookie folosit de Google Translate
+                document.cookie = "googtrans=/ro/" + lang + ";path=/";
+                document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+
+                location.reload();
+            }
+
+            // Aplică limba salvată automat la încărcarea paginii
+            (function () {
+                const lang = localStorage.getItem('site_lang');
+                if (lang && lang !== 'ro') {
+                    document.cookie = "googtrans=/ro/" + lang + ";path=/";
+                    document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+                }
+            })();
+        </script>
+
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

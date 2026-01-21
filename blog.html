@@ -21,7 +21,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Font special pentru titlul din hero -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -38,7 +37,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Mic override: font doar pentru titlul din hero -->
     <style>
         .hero-title {
             font-family: 'Playfair Display', serif !important;
@@ -46,10 +44,28 @@
             line-height: 1.1;
             letter-spacing: .5px;
         }
+
+        /* ascundem bannerul google translate */
+        .goog-te-banner-frame.skiptranslate,
+        body>.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        /* modal: look mai curat pt articol */
+        .news-modal-hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 
 <body>
+
     <!-- Topbar -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
@@ -63,21 +79,18 @@
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height:45px;">
-                    <!-- Facebook -->
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
                         href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank" rel="noopener"
                         aria-label="Facebook">
                         <i class="fab fa-facebook-f fw-normal"></i>
                     </a>
 
-                    <!-- Instagram -->
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
                         href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
                         aria-label="Instagram">
                         <i class="fab fa-instagram fw-normal"></i>
                     </a>
 
-                    <!-- Email -->
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
                         href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
                         <i class="fa fa-envelope-open fw-normal"></i>
@@ -88,7 +101,7 @@
         </div>
     </div>
 
-    <!-- Navbar -->
+    <!-- Navbar + Hero -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
@@ -105,15 +118,14 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">Despre noi</a></li>
                     <li class="nav-item"><a class="nav-link" href="service.html">Servicii</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Noutăți</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 
-                    <!-- RO/EN intră și ele în meniu pe mobil -->
                     <li class="nav-item ms-lg-3">
                         <div class="lang-switch d-flex gap-2 py-2 py-lg-0">
-                            <a class="btn btn-sm btn-light text-dark px-2" href="blog.html" aria-label="Română"
-                                aria-current="true">RO</a>
-                            <a class="btn btn-sm btn-dark text-white px-2" href="blog_engleza.html"
-                                aria-label="English">EN</a>
+                            <a class="btn btn-sm btn-light text-dark px-2" href="#"
+                                onclick="setLang('ro'); return false;" aria-label="Română">RO</a>
+                            <a class="btn btn-sm btn-dark text-white px-2" href="#"
+                                onclick="setLang('en'); return false;" aria-label="English">EN</a>
                         </div>
                     </li>
                 </ul>
@@ -121,10 +133,9 @@
         </nav>
 
         <div class="container-fluid hero-std"
-            style="
-       background:
-         linear-gradient(rgba(17,24,39,.55), rgba(17,24,39,.55)),
-         url('img/20251013_0907_Ziare Proaspăt Tipărite_simple_compose_01k7e2v1w7fjt9c1nj53d7wdws.png') center/cover no-repeat;">
+            style="background:
+                linear-gradient(rgba(17,24,39,.55), rgba(17,24,39,.55)),
+                url('img/20251013_0907_Ziare Proaspăt Tipărite_simple_compose_01k7e2v1w7fjt9c1nj53d7wdws.png') center/cover no-repeat;">
             <div class="row py-4">
                 <div class="col-12 text-center">
                     <h1 class="display-4 text-white">Noutăți</h1>
@@ -134,289 +145,757 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- /Navbar + Hero -->
 
+    <!-- Lista de noutăți -->
+    <section class="container py-4 mt-3">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width:720px;">
+            <h1 class="mb-0">Ultimele noutăți de la Fabrica de Timbre</h1>
+        </div>
 
+        <div class="row g-4">
 
-        <!-- Lista de noutăți -->
-        <section class="container py-4 mt-3">
+            <!-- Card 1 (POPUP / MODAL cu template) -->
+            <div class="col-md-6 col-lg-4">
+                <article class="blog-item bg-light rounded overflow-hidden h-100 d-flex flex-column position-relative">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/480960356_935641075435427_3796715942670412543_n.jpg"
+                            alt="Primele carduri de energie, tipărite la Fabrica de Timbre">
+                    </div>
 
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width:720px;">
-
-                <h1 class="mb-0">Ultimele noutăți de la Fabrica de Timbre</h1>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <article
-                        class="blog-item bg-light rounded overflow-hidden h-100 d-flex flex-column position-relative">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/480960356_935641075435427_3796715942670412543_n.jpg"
-                                alt="Primele carduri de energie, tipărite la Fabrica de Timbre">
+                    <div class="p-4 d-flex flex-column">
+                        <div class="d-flex mb-2 small text-muted">
+                            <i class="far fa-calendar-alt text-primary me-2"></i><span>25 ianuarie 2023</span>
                         </div>
 
-                        <div class="p-4 d-flex flex-column">
-                            <div class="d-flex mb-2 small text-muted">
-                                <i class="far fa-calendar-alt text-primary me-2"></i><span>25 ianuarie 2023</span>
-                            </div>
-
-                            <h5 class="mb-3">
-                                <a href="noutate-carduri-energie.html" class="text-dark text-decoration-none">
-                                    Primele carduri de energie, tipărite la Fabrica de Timbre
-                                </a>
-                            </h5>
-
-                            <p class="text-muted">
-                                Am tipărit și împlicuit primele carduri de energie, pregătite pentru expediere către
-                                familiile eligibile…
-                            </p>
-
-                            <!-- Butonul vizibil -->
-                            <div class="mt-auto">
-                                <a href="noutate-carduri-energie.html" class="btn btn-primary btn-sm">
-                                    Citește mai mult
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Face întreg cardul clickabil (opțional, poți lăsa și doar butonul) -->
-                        <a class="stretched-link" href="noutate-carduri-energie.html"
-                            aria-label="Deschide articolul: Primele carduri de energie"></a>
-                    </article>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <article
-                        class="blog-item bg-light rounded overflow-hidden h-100 d-flex flex-column position-relative">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/485946036_1263284225803071_5898408928726560954_n.jpg"
-                                alt="Fabrica de Timbre, live la RRA">
-                        </div>
-
-                        <div class="p-4 d-flex flex-column">
-                            <div class="d-flex mb-2 small text-muted">
-                                <i class="far fa-calendar-alt text-primary me-2"></i><span>4 februarie 2023</span>
-                            </div>
-
-                            <h5 class="mb-3">
-                                <a href="noutate-rra.html" class="text-dark text-decoration-none">
-                                    Fabrica de Timbre, live la RRA: tezaur, tradiție, viitor
-                                </a>
-                            </h5>
-
-                            <p class="text-muted">
-                                De Ziua Internațională a Decorării Plicurilor Poștale am vorbit despre patrimoniul FT și
-                                proiectele noi…
-                            </p>
-
-                            <div class="mt-auto">
-                                <a href="noutate-rra.html" class="btn btn-primary btn-sm">
-                                    Citește mai mult
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- opțional: face întreg cardul clickabil -->
-                        <a class="stretched-link" href="noutate-rra.html"
-                            aria-label="Deschide articolul: Fabrica de Timbre, live la RRA"></a>
-                    </article>
-                </div>
-
-
-                <!-- Card 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <article
-                        class="blog-item bg-light rounded overflow-hidden h-100 d-flex flex-column position-relative">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/blog-3.jpg"
-                                alt="File de istorie: noua serie de 50 de cărți poștale românești">
-                        </div>
-
-                        <div class="p-4 d-flex flex-column">
-                            <div class="d-flex mb-2 small text-muted">
-                                <i class="far fa-calendar-alt text-primary me-2"></i><span>22 decembrie 2022</span>
-                            </div>
-
-                            <h5 class="mb-3">
-                                <a href="noutate-file-de-istorie.html" class="text-dark text-decoration-none">
-                                    File de istorie: noua serie de 50 de cărți poștale românești
-                                </a>
-                            </h5>
-
-                            <p class="text-muted">
-                                Poșta Română lansează o colecție ilustrată de artiști români – o punte între tradiție și
-                                identitate…
-                            </p>
-
-                            <div class="mt-auto">
-                                <a href="noutate-file-de-istorie.html" class="btn btn-primary btn-sm">
-                                    Citește mai mult
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- face întreg cardul clickabil, păstrând butonul -->
-                        <a class="stretched-link" href="noutate-file-de-istorie.html"
-                            aria-label="Deschide articolul: File de istorie"></a>
-                    </article>
-                </div>
-
-            </div>
-        </section>
-        <!-- Footer Start -->
-        <footer class="site-footer container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row gx-5">
-                    <!-- Logo + tagline -->
-                    <div class="col-lg-4 col-md-6 ps-0">
-                        <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
-                            <a href="index.html" class="navbar-brand p-0">
-                                <img src="img/Logo-POSTA-Tipografie.png" alt="Poșta Tipografie"
-                                    style="max-height:96px;height:auto;filter:brightness(0) invert(1);" />
+                        <h5 class="mb-3">
+                            <a href="#" class="text-dark text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#newsModal" data-template="#tpl-energy"
+                                data-title="Primele carduri de energie, tipărite la Fabrica de Timbre"
+                                data-date="25 ianuarie 2023"
+                                data-img="img/480960356_935641075435427_3796715942670412543_n.jpg">
+                                Primele carduri de energie, tipărite la Fabrica de Timbre
                             </a>
-                            <p class="mt-3 mb-0">Fabrica de Timbre — tipar premium din 1872.</p>
+                        </h5>
+
+                        <p class="text-muted">
+                            Am tipărit și împlicuit primele carduri de energie, pregătite pentru expediere către
+                            familiile eligibile…
+                        </p>
+
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#newsModal" data-template="#tpl-energy"
+                                data-title="Primele carduri de energie, tipărite la Fabrica de Timbre"
+                                data-date="25 ianuarie 2023"
+                                data-img="img/480960356_935641075435427_3796715942670412543_n.jpg">
+                                Citește mai mult
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Coloane dreapta -->
-                    <div class="col-lg-8 col-md-6">
-                        <div class="row gx-5">
-                            <!-- Date de contact -->
-                            <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                    <h3 class="text-light mb-0">Date de contact</h3>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <i class="bi bi-geo-alt text-primary me-2"></i>
-                                    <p class="mb-0">Strada Fabrica de Chibrituri 28, București 050183</p>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <i class="bi bi-envelope-open text-primary me-2"></i>
-                                    <p class="mb-0">ft@posta-romana.ro</p>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <i class="bi bi-telephone text-primary me-2"></i>
-                                    <p class="mb-0">021 335 5350</p>
-                                </div>
-                                <div class="d-inline-flex align-items-center" style="height:45px;">
-                                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                                        href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank"
-                                        rel="noopener" aria-label="Facebook">
-                                        <i class="fab fa-facebook-f fw-normal"></i>
-                                    </a>
-                                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                                        href="https://www.instagram.com/fabrica_de_timbre/" target="_blank"
-                                        rel="noopener" aria-label="Instagram">
-                                        <i class="fab fa-instagram fw-normal"></i>
-                                    </a>
-                                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
-                                        href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
-                                        <i class="fa fa-envelope-open fw-normal"></i>
-                                    </a>
-                                </div>
-                            </div>
+                    <a class="stretched-link" href="#" data-bs-toggle="modal" data-bs-target="#newsModal"
+                        data-template="#tpl-energy"
+                        data-title="Primele carduri de energie, tipărite la Fabrica de Timbre"
+                        data-date="25 ianuarie 2023" data-img="img/480960356_935641075435427_3796715942670412543_n.jpg"
+                        aria-label="Deschide articolul: Primele carduri de energie"></a>
+                </article>
+            </div>
 
-                            <!-- Navigație -->
-                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                    <h3 class="text-light mb-0">Navigație</h3>
-                                </div>
-                                <div class="link-animated d-flex flex-column justify-content-start">
-                                    <a class="text-light mb-2" href="index.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
-                                    <a class="text-light mb-2" href="about.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
-                                    <a class="text-light mb-2" href="service.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
-                                    <a class="text-light mb-2" href="blog.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                    <a class="text-light" href="contact.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
-                                </div>
-                            </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="blog-item bg-light rounded overflow-hidden h-100 d-flex flex-column position-relative">
 
-                            <!-- Cele mai căutate -->
-                            <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                                <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                    <h3 class="text-light mb-0">Cele mai căutate</h3>
-                                </div>
-                                <div class="link-animated d-flex flex-column justify-content-start">
-                                    <a class="text-light mb-2" href="index.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
-                                    <a class="text-light mb-2" href="about.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
-                                    <a class="text-light mb-2" href="service.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
-                                    <a class="text-light mb-2" href="blog.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
-                                    <a class="text-light" href="contact.html"><i
-                                            class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
-                                </div>
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/485946036_1263284225803071_5898408928726560954_n.jpg"
+                            alt="Fabrica de Timbre, live la RRA">
+                    </div>
+
+                    <div class="p-4 d-flex flex-column">
+                        <div class="d-flex mb-2 small text-muted">
+                            <i class="far fa-calendar-alt text-primary me-2"></i>
+                            <span>4 februarie 2023</span>
+                        </div>
+
+                        <h5 class="mb-3">
+                            <a href="#" class="text-dark text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#newsModal" data-template="#tpl-rra"
+                                data-title="Tezaur, tradiție, viitor — intervenție live la Radio România Actualități">
+                                Fabrica de Timbre, live la RRA: tezaur, tradiție, viitor
+                            </a>
+                        </h5>
+
+                        <p class="text-muted">
+                            De Ziua Internațională a Decorării Plicurilor Poștale am vorbit despre patrimoniul FT și
+                            proiectele noi…
+                        </p>
+
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#newsModal" data-template="#tpl-rra"
+                                data-title="Tezaur, tradiție, viitor — intervenție live la Radio România Actualități">
+                                Citește mai mult
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- STRETCHED LINK – FĂRĂ NAVIGARE -->
+                    <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#newsModal"
+                        data-template="#tpl-rra"
+                        data-title="Tezaur, tradiție, viitor — intervenție live la Radio România Actualități"
+                        aria-label="Deschide articolul: Fabrica de Timbre, live la RRA"></a>
+
+                </article>
+            </div>
+
+
+            <!-- Card 3 (încă pe pagină separată - îl poți transforma și pe el identic) -->
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <article class="blog-item bg-light rounded overflow-hidden h-100 d-flex flex-column position-relative">
+
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-3.jpg"
+                            alt="File de istorie: noua serie de 50 de cărți poștale românești">
+                    </div>
+
+                    <div class="p-4 d-flex flex-column">
+                        <div class="d-flex mb-2 small text-muted">
+                            <i class="far fa-calendar-alt text-primary me-2"></i>
+                            <span>22 decembrie 2022</span>
+                        </div>
+
+                        <h5 class="mb-3">
+                            <a href="#" class="text-dark text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#newsModal" data-template="#tpl-istorie">
+                                File de istorie: noua serie de 50 de cărți poștale românești
+                            </a>
+                        </h5>
+
+                        <p class="text-muted">
+                            Poșta Română lansează o colecție ilustrată de artiști români – o punte între tradiție și
+                            identitate…
+                        </p>
+
+                        <div class="mt-auto">
+                            <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#newsModal" data-template="#tpl-istorie">
+                                Citește mai mult
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#newsModal"
+                        data-template="#tpl-istorie" aria-label="Deschide articolul: File de istorie"></a>
+
+                </article>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- MODAL (popup) pentru articole -->
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newsModalTitle">Noutate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+                </div>
+                <div class="modal-body" id="newsModalBody">
+                    <!-- aici intră conținutul din template -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEMPLATE: articol complet Carduri Energie -->
+    <template id="tpl-energy">
+        <main class="container pb-4 mt-4">
+            <article class="mx-auto" style="max-width: 960px;">
+                <header class="mb-3">
+                    <div class="small text-muted mb-1">
+                        <i class="far fa-calendar-alt text-primary me-2"></i>25 ianuarie 2023
+                    </div>
+                    <h1 class="post-title fw-bold">Primele carduri de energie, tipărite la Fabrica de Timbre</h1>
+                </header>
+
+                <div class="post-body">
+                    <p><strong>𝗙𝗮𝗯𝗿𝗶𝗰𝗮 𝗱𝗲 𝗧𝗶𝗺𝗯𝗿𝗲. 𝗣𝗿𝗶𝗻𝘁ă𝗺 𝗽𝗿𝗶𝗺𝗲𝗹𝗲 𝗰𝗮𝗿𝗱𝘂𝗿𝗶 𝗱𝗲
+                            𝗲𝗻𝗲𝗿𝗴𝗶𝗲</strong></p>
+
+                    <p>La etajul unu al Fabricii de Timbre intri doar cu cartelă de acces. Acolo lucrează vârful de
+                        lance al
+                        printului din România: linia de tipar digital color produsă de Canon și cea de împlicuire.
+                        Ambele sunt
+                        investiții extrem de valoroase ale Poștei Române, menite să atragă și mai mult business și
+                        clienți.
+                    </p>
+
+                    <p>Linia de tipar este îngrijită ca la farmacie: praful este ținut departe, iar temperatura
+                        rămâne 22 de grade, indiferent de anotimp. Apa folosită este purificată printr-un sistem de
+                        filtre. Cel mai mare câștig, însă, este că această mașină suportă nenumărate tipuri de
+                        hârtie, indiferent de gramaj. Plus, viteza. Superioară oricărei mașini clasice cu toner.</p>
+
+                    <p>Cele două mașini au țăcănit astăzi continuu, aproape fără pauză. Au avut multă treabă – au
+                        printat și împlicuit primele carduri de energie. Până spre seară, toate cardurile menite să
+                        ajute familii vulnerabile din câteva județe erau gata tipărite, puse în plicuri și tocmai
+                        bune de trimis la drum. 🏘🏡🏢</p>
+
+                    <p>Vor ajunge, de aici, în mâinile poștașilor, apoi în casele familiilor cu venituri mici. Peste
+                        4 milioane de români vor beneficia de ajutor la plata facturilor. Primele plăți vor putea fi
+                        făcute din 20 februarie, după cum a declarat astăzi jurnaliștilor Marcel Boloș, ministrul
+                        Investițiilor și Proiectelor Europene, aflat în vizită la Fabrica de Timbre, sucursală a
+                        Poștei Române.</p>
+
+                    <p>“Întreg calendarul proiectului este respectat întocmai și nu există niciun fel de întârziere.
+                        Pentru fiecare etapă a proiectului, angajații noștri au parte de training. De altfel, Poșta
+                        Română asigură instruirea necesară la fiecare contract nou pe care îl desfășoară. Este
+                        firesc să fie așa; ne customizăm serviciile în funcție de clienți”, a asigurat Valentin
+                        Ștefan, directorul general al Poștei Române.</p>
+
+                    <p>Fără investițiile de anul trecut de la Fabrica de Timbre – mașina de tipar și cea de
+                        împlicuit – poate că aceste carduri nu ar fi putut ajunge atât de repede la români. Cele
+                        două linii, însă, cu tehnologia lor de ultimă generație, parte din modernizarea Poștei
+                        Române, au rezolvat și această problemă.</p>
+
+                    <p>Și nu numai. Utilajele de la Fabrica de Timbre pun Poșta pe o piață mult mai largă de
+                        prestatori de servicii. Printăm, împlicuim, distribuim. Repede, divers și absolut peste tot
+                        unde ți-ai putea imagina. ♥️ Fiindcă suntem singurii care putem măsura România la pas.</p>
+
+                    <p class="small text-muted mb-2">#PoștaRomână #MIPE #CarduriDeEnergie #ParteDinViațaRomânilor</p>
+                    <p class="small text-muted">Foto: Alexandru Stoica</p>
+                </div>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary btn-pill" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left me-1"></i> Înapoi la noutăți
+                    </button>
+                </div>
+            </article>
+
+            <!-- Galerie foto -->
+            <section class="pt-4 pb-2">
+                <h2 class="h4 mb-3 text-center">Galerie foto</h2>
+
+                <div class="mx-auto" style="max-width: 960px;">
+                    <div id="galerieEnergy" class="carousel slide news-gallery" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="1"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="1"
+                                aria-label="2"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="2"
+                                aria-label="3"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="3"
+                                aria-label="4"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="4"
+                                aria-label="5"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="5"
+                                aria-label="6"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="6"
+                                aria-label="7"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="7"
+                                aria-label="8"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="8"
+                                aria-label="9"></button>
+                            <button type="button" data-bs-target="#galerieEnergy" data-bs-slide-to="9"
+                                aria-label="10"></button>
+                        </div>
+
+                        <div class="carousel-inner rounded shadow-sm overflow-hidden">
+                            <div class="carousel-item active">
+                                <img src="img/galerie/480914728_935640888768779_2048139419822142161_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 01">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480750597_935640908768777_2582143757316214060_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 02">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/481119794_935640922102109_101745334730857632_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 03">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480925335_935641258768742_4478762051379272269_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 04">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/481237059_935641148768753_5395736116884114987_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 05">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480785896_935641248768743_6091773595193196733_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 06">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480609979_935640912102110_7177134931628152591_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 07">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480841231_935640952102106_8780350427671069781_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 08">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480683599_935640962102105_4119835243871996432_n.jpg"
+                                    class="d-block w-100" alt="Carduri energie - 09">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie/480960356_935641075435427_3796715942670412543_n%20(1).jpg"
+                                    class="d-block w-100" alt="Carduri energie - 10">
                             </div>
                         </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#galerieEnergy"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#galerieEnergy"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Următor</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </template>
+
+    <!-- TEMPLATE: articol complet RRA (Card 2) -->
+    <template id="tpl-rra">
+        <!-- Conținut articol -->
+        <main class="container pb-4 mt-4">
+            <!-- breadcrumbs opțional -->
+            <nav class="mb-3 small" style="max-width:960px;margin-left:auto;margin-right:auto;">
+                <a href="index.html">Acasă</a> <span class="px-1">\</span>
+                <a href="blog.html">Noutăți</a> <span class="px-1">\</span>
+                <span class="text-muted">Fabrica de Timbre, live la RRA</span>
+            </nav>
+
+            <!-- lățime uniformă 960px -->
+            <article class="mx-auto" style="max-width: 960px;">
+                <header class="mb-3">
+                    <div class="small text-muted mb-1">
+                        <i class="far fa-calendar-alt text-primary me-2"></i>4 februarie 2023
+                    </div>
+                    <h1 class="post-title fw-bold">Tezaur, tradiție, viitor — intervenție live la Radio România
+                        Actualități</h1>
+                </header>
+
+                <div class="post-body">
+                    <p>📯 <strong>File de istorie!</strong><br>
+                        Pe data de 4 februarie, de <em>Ziua Internațională a Decorării Plicurilor Poștale</em>, minunata
+                        noastră <strong>Fabrica de Timbre</strong> a fost subiectul unei intervenții live la emisiunea
+                        <em>„Dimineți cu soare”</em> de la <strong>Radio România Actualități</strong>. Am vorbit despre
+                        <strong>Tezaurul de Timbre</strong> pe care îl păstrăm și îl îngrijim, despre
+                        <strong>obligațiunile de stat</strong> pe care le-am tipărit pentru țări exotice, încă de acum o
+                        sută de ani,
+                        dar și despre <strong>investițiile</strong> pe care le-am făcut anul trecut în
+                        <strong>digitalizarea</strong>
+                        și <strong>retehnologizarea</strong> Fabricii de Timbre.
+                    </p>
+
+                    <p>👍 Mirajul Fabricii noastre tocmai acesta este, anume că în <strong>151 de ani</strong> de
+                        funcționare
+                        neîntreruptă, indiferent de vremuri — pace, război, molime, crize, guverne — am reușit
+                        întotdeauna
+                        să fim vii, prosperi și să tipărim piese care sunt răspândite astăzi prin toate țările lumii. În
+                        sertare, în
+                        biblioteci, în documentele oficiale din întreaga lume fiți siguri că se află în acest moment
+                        mici
+                        fărâme din
+                        tot ce a însemnat munca noastră aici, la Fabrică.</p>
+
+                    <p>Pentru asta, le mulțumim <strong>angajaților noștri</strong>, dar și <strong>poștașilor</strong>!
+                        Tot
+                        pe 4 februarie a fost sărbătorită și <strong>Ziua Mulțumirii Poștașului</strong> așa că, dragi
+                        colegi,
+                        prețuim profund felul în care, de 151 de ani, ați făcut să călătorească în lumea largă plicuri,
+                        timbre și
+                        orice am mai tipărit la Fabrică. ❤</p>
+
+                    <p class="small text-muted mb-0">
+                        #FabricadeTimbre #151ani #filedeistorie #straBUNIintipat #timbre #plicuri #obligatiunidestat
+                        #tipar
+                        #postasi
+                        #PostaRomana #tezaur #trecut #prezent #viitor
+                    </p>
+                </div>
+
+                <!-- Buton înapoi -->
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary btn-pill" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left me-1"></i> Înapoi la noutăți
+                    </button>
+                </div>
+            </article>
+
+            <!-- Video: încadrat în aceeași lățime ca textul (960px) -->
+            <section class="pt-4 pb-2">
+                <div class="mx-auto" style="max-width:960px;">
+                    <div class="ratio ratio-16x9 rounded shadow">
+                        <video controls preload="metadata"
+                            poster="img/485946036_1263284225803071_5898408928726560954_n.jpg">
+                            <source
+                                src="img/AQNE8a98xNVNg4oG4cspcJ-rslIlb6arYX5t3G63TKGwlBRp3iro6G1P1rhKCIFLmcyxlNPB_iyey-4zTllSTfrXWYiW6V1fZ9xzgsEr3FCceA.mp4"
+                                type="video/mp4">
+                            Browserul tău nu suportă elementul video HTML5.
+                        </video>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </template>
+    <!-- TEMPLATE: articol complet File de istorie -->
+    <template id="tpl-istorie">
+        <main class="container pb-4 mt-4">
+
+            <article class="mx-auto" style="max-width: 960px;">
+                <header class="mb-3">
+                    <div class="small text-muted mb-1">
+                        <i class="far fa-calendar-alt text-primary me-2"></i>22 decembrie 2022
+                    </div>
+                    <h1 class="post-title fw-bold">
+                        File de istorie — noua serie de 50 de cărți poștale românești
+                    </h1>
+                </header>
+
+                <div class="post-body">
+                    <p><strong>Un proiect de suflet</strong> la care am lucrat alături de domnul director general
+                        <strong>Valentin Ștefan</strong>! Poșta Română a lansat o serie de
+                        <strong>50 de cărți poștale</strong>, modele unicat, ce ilustrează teme legate de identitatea
+                        națională 💌🇷🇴📯
+                    </p>
+
+                    <p>
+                        Cărțile poștale au fost create de <strong>artiști autohtoni</strong>, al căror talent este
+                        promovat de
+                        <strong>Compania Naţională Poşta Română</strong> în parteneriat cu
+                        <strong>Clubul Ilustratorilor / Illustrators Club</strong>.
+                    </p>
+
+                    <p>
+                        Prin acest proiect, unim <strong>tradiția de 160 de ani</strong> a Poștei Române și cea de
+                        <strong>150 de ani</strong> a Fabricii de Timbre cu povestea veche de
+                        <strong>130 de ani</strong> a lansării primei ilustrate românești.
+                    </p>
+
+                    <p>
+                        <strong>Ilustratele</strong> vor putea fi achiziționate din
+                        <strong>rețeaua de oficii poștale</strong>, începând cu luna
+                        <strong>ianuarie 2023</strong>.
+                    </p>
+
+                    <p class="mb-0"><em>File de istorie!</em></p>
+                </div>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary btn-pill" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left me-1"></i> Înapoi la noutăți
+                    </button>
+                </div>
+            </article>
+
+            <!-- Galerie foto -->
+            <section class="pt-4 pb-2">
+                <h2 class="h4 mb-3 text-center">Galerie foto</h2>
+
+                <div class="mx-auto" style="max-width: 960px;">
+                    <div id="galerieIstorie" class="carousel slide news-gallery" data-bs-ride="false">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="6"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="7"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="8"></button>
+                            <button type="button" data-bs-target="#galerieIstorie" data-bs-slide-to="9"></button>
+                        </div>
+
+                        <div class="carousel-inner rounded shadow-sm overflow-hidden">
+                            <div class="carousel-item active">
+                                <img src="img/galerie2/480658114_1786464745532088_4194697156087944424_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/480657531_1786464925532070_4214997701557297563_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/480849814_1786464845532078_8340408165423876317_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/480862542_1786464742198755_693058209943840817_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/480893044_1786464775532085_3890574347263827693_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/481116621_1786465058865390_9028506305154527197_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/481121974_1786464915532071_882082363591868827_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/481158373_1786464968865399_6947323934228828983_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/481238723_1786465052198724_966656594130984521_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/galerie2/481284714_1786464832198746_8519981280543851554_n.jpg"
+                                    class="d-block w-100">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#galerieIstorie"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#galerieIstorie"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </template>
+
+    <!-- Footer -->
+    <footer class="site-footer container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 ps-0">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 p-4">
+                        <a href="index.html" class="navbar-brand p-0">
+                            <img src="img/Logo-POSTA-Tipografie.png" alt="Poșta Tipografie"
+                                style="max-height:96px;height:auto;filter:brightness(0) invert(1);" />
+                        </a>
+                        <p class="mt-3 mb-0">Fabrica de Timbre — tipar premium din 1872.</p>
                     </div>
                 </div>
 
-                <!-- Strip de brand (în interiorul aceluiași .container) -->
-                <div class="row footer-brands-row pt-2 mt-2 border-top border-white-10">
-
-                    <div class="col-12">
-                        <div class="footer-brands">
-                            <a href="https://imobiliare.posta-romana.ro/" target="_blank" rel="noopener">
-                                <img class="footer-brand" src="img/Untitled image(55).png" alt="Poșta Imobiliare">
-                            </a>
-                            <img class="footer-brand" src="img/Untitled image(56).png" alt="Poșta Tipografie">
-                            <img class="footer-brand" src="img/Untitled image(56)(57).png"
-                                alt="Oficiul Poștal Universal">
-                            <img class="footer-brand" src="img/Untitled image(56)(58).png" alt="Poșta Finance">
-                            <img class="footer-brand" src="img/Untitled image(56)(59).png" alt="Poșta Logistics">
-                            <img class="footer-brand footer-brand--zor" src="img/Untitled image(51).png"
-                                alt="ZOR — Poșta Română">
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Date de contact</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Strada Fabrica de Chibrituri 28, București 050183</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">ft@posta-romana.ro</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">021 335 5350</p>
+                            </div>
+                            <div class="d-inline-flex align-items-center" style="height:45px;">
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                    href="https://www.facebook.com/fabricadetimbre.ro/?locale=ro_RO" target="_blank"
+                                    rel="noopener" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f fw-normal"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                                    href="https://www.instagram.com/fabrica_de_timbre/" target="_blank" rel="noopener"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram fw-normal"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+                                    href="mailto:ft@posta-romana.ro" aria-label="Trimite email">
+                                    <i class="fa fa-envelope-open fw-normal"></i>
+                                </a>
+                            </div>
                         </div>
 
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Navigație</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
+                                <a class="text-light mb-2" href="about.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
+                                <a class="text-light mb-2" href="service.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
+                                <a class="text-light mb-2" href="blog.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
+                                <a class="text-light" href="contact.php"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Cele mai căutate</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Acasă</a>
+                                <a class="text-light mb-2" href="about.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Despre noi</a>
+                                <a class="text-light mb-2" href="service.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Servicii</a>
+                                <a class="text-light mb-2" href="blog.html"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Noutăți</a>
+                                <a class="text-light" href="contact.php"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Contactează-ne</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- /Footer End -->
 
-
-
-        <div class="container-fluid text-white" style="background:#061429;">
-            <div class="container text-center">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
-                        <div class="d-flex align-items-center justify-content-center" style="height:75px;">
-                            <p class="mb-0">
-                                &copy; <span id="year"></span> Sucursala Fabrica de Timbre — Compania Națională Poșta
-                                Română
-                                S.A. Toate drepturile rezervate.
-                            </p>
-                        </div>
+            <div class="row footer-brands-row pt-2 mt-2 border-top border-white-10">
+                <div class="col-12">
+                    <div class="footer-brands">
+                        <a href="https://imobiliare.posta-romana.ro/" target="_blank" rel="noopener">
+                            <img class="footer-brand" src="img/Untitled image(55).png" alt="Poșta Imobiliare">
+                        </a>
+                        <img class="footer-brand" src="img/Untitled image(56).png" alt="Poșta Tipografie">
+                        <img class="footer-brand" src="img/Untitled image(56)(57).png" alt="Oficiul Poștal Universal">
+                        <img class="footer-brand" src="img/Untitled image(56)(58).png" alt="Poșta Finance">
+                        <img class="footer-brand" src="img/Untitled image(56)(59).png" alt="Poșta Logistics">
+                        <img class="footer-brand footer-brand--zor" src="img/Untitled image(51).png"
+                            alt="ZOR — Poșta Română">
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
 
-        <script>
-            // setează automat anul curent
-            document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
+    <div class="container-fluid text-white" style="background:#061429;">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="d-flex align-items-center justify-content-center" style="height:75px;">
+                        <p class="mb-0">
+                            &copy; <span id="year"></span> Sucursala Fabrica de Timbre — Compania Națională Poșta Română
+                            S.A. Toate drepturile rezervate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Footer End -->
+    <!-- Back to top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 
+    <!-- Year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- MODAL JS: injectează template în popup -->
+    <script>
+        const newsModal = document.getElementById('newsModal');
+        const newsModalTitle = document.getElementById('newsModalTitle');
+        const newsModalBody = document.getElementById('newsModalBody');
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
+        function pauseAllMediaInside(container) {
+            if (!container) return;
+            const videos = container.querySelectorAll('video');
+            videos.forEach(v => { try { v.pause(); } catch (e) { } });
+        }
+
+        newsModal.addEventListener('show.bs.modal', function (event) {
+            const trigger = event.relatedTarget;
+            if (!trigger) return;
+
+            const title = trigger.getAttribute('data-title') || 'Noutate';
+            const tplSel = trigger.getAttribute('data-template');
+
+            newsModalTitle.textContent = title;
+            newsModalBody.innerHTML = '';
+
+            if (!tplSel) {
+                newsModalBody.innerHTML = '<p class="text-muted mb-0">Conținut indisponibil.</p>';
+                return;
+            }
+
+            const tpl = document.querySelector(tplSel);
+            if (!tpl || !tpl.content) {
+                newsModalBody.innerHTML = '<p class="text-muted mb-0">Template-ul nu a fost găsit.</p>';
+                return;
+            }
+
+            newsModalBody.appendChild(tpl.content.cloneNode(true));
+        });
+
+        newsModal.addEventListener('hidden.bs.modal', function () {
+            pauseAllMediaInside(newsModalBody);
+            newsModalBody.innerHTML = '';
+        });
+    </script>
+
+    <!-- Google Translate (RO/EN) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ro',
+                includedLanguages: 'ro,en',
+                autoDisplay: false
+            }, 'google_translate_element');
+
+            setTimeout(applySavedLang, 700);
+        }
+
+        function applySavedLang() {
+            const lang = localStorage.getItem('site_lang') || 'ro';
+            if (lang === 'ro') return;
+
+            const select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event('change'));
+            }
+        }
+
+        function setLang(lang) {
+            localStorage.setItem('site_lang', lang);
+            document.cookie = "googtrans=/ro/" + lang + ";path=/";
+            document.cookie = "googtrans=/ro/" + lang + ";path=/;domain=" + location.hostname;
+            location.reload();
+        }
+    </script>
+
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>
