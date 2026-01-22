@@ -34,7 +34,7 @@ require __DIR__ . "/PHPMailer/src/PHPMailer.php";
 require __DIR__ . "/PHPMailer/src/SMTP.php";
 
 // ===================== 5) DESTINATAR (schimbi aici) =====================
-$toEmail = "comenzionline.ft@ro.post"; // <-- AICI pui emailul unde vrei să ajungă cererea
+$toEmail = ""; // <-- AICI pui emailul unde vrei să ajungă cererea
 $toName  = "Destinatar Cereri";
 
 // ===================== 6) Subiect + corp =====================
@@ -56,8 +56,8 @@ $bodyHtml = nl2br(htmlspecialchars($bodyText, ENT_QUOTES, "UTF-8"));
 // 2) Generezi "App Password" și îl pui la $SMTP_PASS
 $SMTP_HOST = "smtp.gmail.com";
 $SMTP_PORT = 587; // 587 = STARTTLS
-$SMTP_USER = "maria.ardeleanu@ro.post";      // <-- emailul cu care TRIMIȚI
-$SMTP_PASS = "fidu dekf frop dkqy";         // <-- App Password (16 caractere)
+$SMTP_USER = "";      // <-- emailul cu care TRIMIȚI
+$SMTP_PASS = "";         // <-- App Password (16 caractere)
 $FROM_NAME = "Formular site — Fabrica de Timbre";
 
 try {
